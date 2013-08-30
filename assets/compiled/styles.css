@@ -1,0 +1,123 @@
+/* All your CSS starts here!
+   Use SASS/CSS imports to pull in more files.
+   The Grunt scripts will automatically merge all these files into /compiled/styles.css */
+/* colos */
+/*Fonts*/
+/* mixins */
+/* main */
+/* line 4, /Users/nattkua/Clients/modulus/new_solidus_test/assets/styles/_main.scss */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+/* line 11, /Users/nattkua/Clients/modulus/new_solidus_test/assets/styles/_main.scss */
+html body {
+  height: 100%;
+  width: 100%;
+}
+/* line 12, /Users/nattkua/Clients/modulus/new_solidus_test/assets/styles/_main.scss */
+html body .wrapper {
+  color: #efefef;
+  background-image: url('/images/bg-format-01.jpg');
+  background-size: cover;
+  background-position: fixed;
+  min-height: 100%;
+  position: absolute;
+  width: 100%;
+}
+
+/* Video */
+/* line 2, /Users/nattkua/Clients/modulus/new_solidus_test/assets/styles/_video.scss */
+.video_wrapper {
+  height: 30em;
+  margin: 0 auto;
+  max-width: 53.313em;
+  position: relative;
+  width: 100%;
+  position: relative;
+  background: #efefef;
+  background: rgba(239, 239, 239, 0.2);
+}
+/* line 9, /Users/nattkua/Clients/modulus/new_solidus_test/assets/styles/_video.scss */
+.video_wrapper video {
+  display: block;
+  height: 100%;
+  margin: 0 auto;
+  position: absolute;
+  width: 100%;
+  z-index: 0;
+}
+/* line 17, /Users/nattkua/Clients/modulus/new_solidus_test/assets/styles/_video.scss */
+.video_wrapper .controls {
+  bottom: 0;
+  position: relative;
+  background: #282828;
+  background: rgba(40, 40, 40, 0.2);
+  left: 0;
+  padding: 1.2em;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  z-index: 1;
+}
+/* line 27, /Users/nattkua/Clients/modulus/new_solidus_test/assets/styles/_video.scss */
+.video_wrapper button {
+  padding: 1.2em;
+}
+
+/* social */
+/* line 2, /Users/nattkua/Clients/modulus/new_solidus_test/assets/styles/_social.scss */
+footer {
+  padding: 2em;
+  text-align: center;
+  width: inherit;
+}
+
+/* line 11, /Users/nattkua/Clients/modulus/new_solidus_test/assets/styles/_social.scss */
+.icon {
+  background-color: #666666;
+  background-repeat: no-repeat;
+  background-position: center center;
+  display: inline-block;
+  height: 2em;
+  width: 2em;
+}
+/* line 18, /Users/nattkua/Clients/modulus/new_solidus_test/assets/styles/_social.scss */
+.icon a {
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+
+/* line 26, /Users/nattkua/Clients/modulus/new_solidus_test/assets/styles/_social.scss */
+.facebook {
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgdmlld0JveD0iLTAuNyAtMC42IDEzNCAyNzgiPjxzdHlsZT4uc3R5bGUwe2ZpbGw6CSNGRkZGRkY7fTwvc3R5bGU+PHBhdGggZD0iTTgyLjYgNThjMCAwLTAuNy01LjUgNC40LTkuNmM1LjEtNCA5LjktMy43IDkuOS0zLjdjMTIuOS0xLjYgMjkuOCAyLjYgMjkuOCAyLjZsNS45LTQyLjdjMCAwLTU5LjctMTQuMy04NS45IDcuMkMyOS41IDI0LjUgMjkuMyA0My43IDI5LjMgNDMuN3Y0Ny43SDAuMmwtMC4yIDQyaDI5LjRsLTEuMSAxNDMuMWw1Mi44IDAuM2wwLjMtMTQzLjRoNDMuMWwyLjktNDEuOWwtNDUuMS0wLjJMODIuNiA1OHoiIGNsYXNzPSJzdHlsZTAiLz48L3N2Zz4=);
+  background-size: 25%;
+}
+/* line 29, /Users/nattkua/Clients/modulus/new_solidus_test/assets/styles/_social.scss */
+.facebook:hover {
+  background-color: #3664A2;
+}
+
+/* Logo */
+/* line 2, /Users/nattkua/Clients/modulus/new_solidus_test/assets/styles/_logo.scss */
+.logo {
+  padding: 2em;
+  width: 100%;
+}
+/* line 5, /Users/nattkua/Clients/modulus/new_solidus_test/assets/styles/_logo.scss */
+.logo h1 {
+  color: #efefef;
+  font-family: 'Oswald', sans-serif;
+  font-size: 3em;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+/* Animation */

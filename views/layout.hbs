@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]><html class="lt-ie9 lt-ie8 lt-ie7"><![endif]-->
+<!--[if IE 7]><html class="lt-ie9 lt-ie8"><![endif]-->
+<!--[if IE 8]><html class="lt-ie9"><![endif]-->
+<!--[if gt IE 8]><!--><html class="no-js"><!--<![endif]-->
+<head>
+
+	<title>{{page.title}}</title>
+	<link rel="stylesheet" href="/compiled/styles.css" />
+	<link href='http://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+	{{#dev}}
+	<!-- Livereload script. Automatically reloads CSS when changed. -->
+	<script src="http://localhost:35729/livereload.js?snipver=1"></script>
+	{{/dev}}
+	<!-- Site context, made available for use in client side javascript -->
+	<script>{{{context}}}</script>
+    <script src="/compiled/scripts.js"></script>
+
+</head>
+<body id="page-{{page.name}}">
+
+	{{{body}}}
+
+</body>
+</html>

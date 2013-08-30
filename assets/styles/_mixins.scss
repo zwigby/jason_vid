@@ -1,0 +1,7 @@
+/* mixins */
+
+@mixin rgba-background($color, $opacity) {
+    position: relative;
+    background: $color;
+    background: rgba($color, $opacity);
+}

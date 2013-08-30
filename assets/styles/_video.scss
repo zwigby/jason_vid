@@ -1,0 +1,30 @@
+/* Video */
+.video_wrapper{
+	height: 30em;
+	margin: 0 auto;
+	max-width: 53.313em;
+	position: relative;
+	width: 100%;
+    @include rgba-background($white, 0.2);
+    video{
+    	display: block;
+		height: 100%;
+		margin: 0 auto;
+		position: absolute;
+		width: 100%;
+		z-index: 0;
+    }
+    .controls{
+    	bottom: 0;
+    	@include rgba-background($bgColor, 0.2);
+    	left: 0;
+    	padding: 1.2em;
+    	position: absolute;
+    	text-align: center;
+    	width: 100%;
+    	z-index: 1
+    }
+    button{
+    	padding: 1.2em;
+    }
+}
