@@ -5,7 +5,7 @@
 /*Fonts*/
 /* mixins */
 /* main */
-/* line 4, /Users/nattkua/Clients/modulus/new_solidus_test/assets/styles/_main.scss */
+/* line 4, /Users/nattkua/Clients/modulus/jason/assets/styles/_main.scss */
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -14,12 +14,12 @@
   margin: 0;
 }
 
-/* line 11, /Users/nattkua/Clients/modulus/new_solidus_test/assets/styles/_main.scss */
+/* line 11, /Users/nattkua/Clients/modulus/jason/assets/styles/_main.scss */
 html body {
   height: 100%;
   width: 100%;
 }
-/* line 12, /Users/nattkua/Clients/modulus/new_solidus_test/assets/styles/_main.scss */
+/* line 12, /Users/nattkua/Clients/modulus/jason/assets/styles/_main.scss */
 html body .wrapper {
   color: #efefef;
   background-image: url('/images/bg-format-01.jpg');
@@ -31,7 +31,7 @@ html body .wrapper {
 }
 
 /* Video */
-/* line 2, /Users/nattkua/Clients/modulus/new_solidus_test/assets/styles/_video.scss */
+/* line 2, /Users/nattkua/Clients/modulus/jason/assets/styles/_video.scss */
 .video_wrapper {
   height: 30em;
   margin: 0 auto;
@@ -42,16 +42,45 @@ html body .wrapper {
   background: #efefef;
   background: rgba(239, 239, 239, 0.2);
 }
-/* line 9, /Users/nattkua/Clients/modulus/new_solidus_test/assets/styles/_video.scss */
+/* line 9, /Users/nattkua/Clients/modulus/jason/assets/styles/_video.scss */
+.video_wrapper .cover {
+  height: 100%;
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+}
+/* line 14, /Users/nattkua/Clients/modulus/jason/assets/styles/_video.scss */
+.video_wrapper .cover .play_img {
+  margin: 0 auto;
+  width: 3em;
+}
+/* line 19, /Users/nattkua/Clients/modulus/jason/assets/styles/_video.scss */
 .video_wrapper video {
   display: block;
   height: 100%;
   margin: 0 auto;
   position: absolute;
   width: 100%;
+}
+/* line 26, /Users/nattkua/Clients/modulus/jason/assets/styles/_video.scss */
+.video_wrapper #v1 {
   z-index: 0;
 }
-/* line 17, /Users/nattkua/Clients/modulus/new_solidus_test/assets/styles/_video.scss */
+/* line 29, /Users/nattkua/Clients/modulus/jason/assets/styles/_video.scss */
+.video_wrapper #v2 {
+  z-index: 1;
+}
+/* line 32, /Users/nattkua/Clients/modulus/jason/assets/styles/_video.scss */
+.video_wrapper #v3 {
+  z-index: 2;
+}
+/* line 35, /Users/nattkua/Clients/modulus/jason/assets/styles/_video.scss */
+.video_wrapper .usernames {
+  font-family: 'Oswald', sans-serif;
+  position: absolute;
+  z-index: 5;
+}
+/* line 40, /Users/nattkua/Clients/modulus/jason/assets/styles/_video.scss */
 .video_wrapper .controls {
   bottom: 0;
   position: relative;
@@ -62,22 +91,22 @@ html body .wrapper {
   position: absolute;
   text-align: center;
   width: 100%;
-  z-index: 1;
+  z-index: 4;
 }
-/* line 27, /Users/nattkua/Clients/modulus/new_solidus_test/assets/styles/_video.scss */
+/* line 50, /Users/nattkua/Clients/modulus/jason/assets/styles/_video.scss */
 .video_wrapper button {
   padding: 1.2em;
 }
 
 /* social */
-/* line 2, /Users/nattkua/Clients/modulus/new_solidus_test/assets/styles/_social.scss */
+/* line 2, /Users/nattkua/Clients/modulus/jason/assets/styles/_social.scss */
 footer {
   padding: 2em;
   text-align: center;
   width: inherit;
 }
 
-/* line 11, /Users/nattkua/Clients/modulus/new_solidus_test/assets/styles/_social.scss */
+/* line 11, /Users/nattkua/Clients/modulus/jason/assets/styles/_social.scss */
 .icon {
   background-color: #666666;
   background-repeat: no-repeat;
@@ -86,30 +115,30 @@ footer {
   height: 2em;
   width: 2em;
 }
-/* line 18, /Users/nattkua/Clients/modulus/new_solidus_test/assets/styles/_social.scss */
+/* line 18, /Users/nattkua/Clients/modulus/jason/assets/styles/_social.scss */
 .icon a {
   display: block;
   height: 100%;
   width: 100%;
 }
 
-/* line 26, /Users/nattkua/Clients/modulus/new_solidus_test/assets/styles/_social.scss */
+/* line 26, /Users/nattkua/Clients/modulus/jason/assets/styles/_social.scss */
 .facebook {
   background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgdmlld0JveD0iLTAuNyAtMC42IDEzNCAyNzgiPjxzdHlsZT4uc3R5bGUwe2ZpbGw6CSNGRkZGRkY7fTwvc3R5bGU+PHBhdGggZD0iTTgyLjYgNThjMCAwLTAuNy01LjUgNC40LTkuNmM1LjEtNCA5LjktMy43IDkuOS0zLjdjMTIuOS0xLjYgMjkuOCAyLjYgMjkuOCAyLjZsNS45LTQyLjdjMCAwLTU5LjctMTQuMy04NS45IDcuMkMyOS41IDI0LjUgMjkuMyA0My43IDI5LjMgNDMuN3Y0Ny43SDAuMmwtMC4yIDQyaDI5LjRsLTEuMSAxNDMuMWw1Mi44IDAuM2wwLjMtMTQzLjRoNDMuMWwyLjktNDEuOWwtNDUuMS0wLjJMODIuNiA1OHoiIGNsYXNzPSJzdHlsZTAiLz48L3N2Zz4=);
   background-size: 25%;
 }
-/* line 29, /Users/nattkua/Clients/modulus/new_solidus_test/assets/styles/_social.scss */
+/* line 29, /Users/nattkua/Clients/modulus/jason/assets/styles/_social.scss */
 .facebook:hover {
   background-color: #3664A2;
 }
 
 /* Logo */
-/* line 2, /Users/nattkua/Clients/modulus/new_solidus_test/assets/styles/_logo.scss */
+/* line 2, /Users/nattkua/Clients/modulus/jason/assets/styles/_logo.scss */
 .logo {
   padding: 2em;
   width: 100%;
 }
-/* line 5, /Users/nattkua/Clients/modulus/new_solidus_test/assets/styles/_logo.scss */
+/* line 5, /Users/nattkua/Clients/modulus/jason/assets/styles/_logo.scss */
 .logo h1 {
   color: #efefef;
   font-family: 'Oswald', sans-serif;
@@ -121,3 +150,19 @@ footer {
 }
 
 /* Animation */
+/* line 4, /Users/nattkua/Clients/modulus/jason/assets/styles/_animation.scss */
+.video_player {
+  -webkit-transition-property: opacity;
+  -moz-transition-property: opacity;
+  -o-transition-property: opacity;
+  transition-property: opacity;
+  -webkit-transition-duration: 0.8s;
+  -moz-transition-duration: 0.8s;
+  -o-transition-duration: 0.8s;
+  transition-duration: 0.8s;
+}
+
+/* line 9, /Users/nattkua/Clients/modulus/jason/assets/styles/_animation.scss */
+.closed {
+  opacity: 0;
+}

@@ -6,13 +6,36 @@
 	position: relative;
 	width: 100%;
     @include rgba-background($white, 0.2);
+    .cover{
+        height: 100%;
+        position: absolute;
+        width: 100%;
+        z-index: 1;
+        & .play_img{
+            margin: 0 auto;
+            width: 3em;
+        }
+    }
     video{
     	display: block;
 		height: 100%;
 		margin: 0 auto;
 		position: absolute;
 		width: 100%;
-		z-index: 0;
+    }
+    #v1{
+        z-index: 0;
+    }
+    #v2{
+        z-index: 1;
+    }
+    #v3{
+        z-index: 2;
+    }
+    .usernames{
+        font-family: 'Oswald', sans-serif;
+        position: absolute;
+        z-index: 5;
     }
     .controls{
     	bottom: 0;
@@ -22,7 +45,7 @@
     	position: absolute;
     	text-align: center;
     	width: 100%;
-    	z-index: 1
+    	z-index: 4
     }
     button{
     	padding: 1.2em;
