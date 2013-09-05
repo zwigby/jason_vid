@@ -27,6 +27,7 @@
 
 		//play and close
 		var cover = $("#play_img");
+		var end = $("#end_img");
 		var player1 = $("#video_player1");
 		var player2 = $("#video_player2");
 		var player3 = $("#video_player3");
@@ -89,22 +90,25 @@
 		    array[randomIndex] = temporaryValue;
 
 		  }
-
 		  return array;
 		}										
 
-		console.dir(insta_vid_list);
 		shuffle(insta_vid_list);
 		for(i = 0; i <= insta_vid_list.length; i++){
 		  	if(insta_vid_list[i] === undefined){
 		  		insta_vid_list.splice(i,1);
 		  	}
 		  }
-		console.dir(insta_vid_list);
 
-	    video.setAttribute("src", insta_vid_list[videoIndex].url);
+		video.setAttribute("src", insta_vid_list[videoIndex].url);
   		video.load();
   		video.muted = true;
+  		video2.setAttribute("src", insta_vid_list[videoIndex+1].url);
+  		video.load();
+  		video.muted = true;
+  		video3.setAttribute("src", "../images/ja_clips/ja_clip_full.mp4");
+  		video3.load();
+  		video3.muted = true;
   		audio.setAttribute("src", "../music/ja-nt.mp3");
 	    audio.load();
 
@@ -118,72 +122,83 @@
 
 	  //audio time check
 	  var checkAudioTime = function(){
-	  	if(audio.currentTime.toFixed(0) === 210){
-	  		return ending();
+	  	if(audio.currentTime.toFixed(0) == 226){
+	  		closing();
+	  	}else if(audio.currentTime.toFixed(0) == 200){
+	  		console.log('ending');
+	  		ending();
+	  		timer = setTimeout(checkAudioTime, 1000);
 	  	}else if(audio.currentTime.toFixed(0) == fanTimer && audio.currentTime.toFixed(0) != jaTimer){
 	  		fanTimer = fanTimer + 5;
 	  		fanVid();
 	  		timer = setTimeout(checkAudioTime, 1000);
+	  		console.log('fan');
 	  	}else if(audio.currentTime.toFixed(0) == jaTimer){
 	  		jaTimer = jaTimer + 30;
 	  		fanTimer = fanTimer + 10;
 	  		jaVid();
-	  		timer = setTimeout(checkAudioTime, 1000);
+	  		timer = setTimeout(checkAudioTime, 1000);;
+	  		console.log('jason');
 	  	}else{
-	  		timer = setTimeout(checkAudioTime, 1000);
+	  		timer = setTimeout(checkAudioTime, 1000);;
+	  		console.log(audio.currentTime.toFixed(0));
 	  	}
 	  }
 
 	  //Jason video
 	  var jaVid = function(){
 	  	if(jaCount >= jason_vid_list.length) jaCount = 0;
-		player2.addClass('closed');
-		player1.addClass('closed');
-		player3.removeClass('closed');
-		video3.setAttribute("src", jason_vid_list[jaCount]);
-		video3.load();
-		video3.play();
+	  	video3.play();
+	  	if(!video3.paused){
+			player3.removeClass('closed');
+			player2.addClass('closed');
+			player1.addClass('closed');
+	  	}
+		video.setAttribute("src", insta_vid_list[videoIndex+1].url);
+		video.load();
 		names.innerHTML = '';
-		video3.muted = true;
 		jaCount++;
 	  }
 
 	  //fan videos
 	  var fanVid = function(){
 	  	videoIndex++
-	  	if(jaCount >= insta_vid_list.length) videoIndex = 0;
+	  	if(insta_vid_list >= insta_vid_list.length) videoIndex = 0;
 	  	if(videoIndex%2==0){
-	  	  player3.addClass('closed');
-	  	  player2.addClass('closed');
+	  	  video.play();
 	  	  player1.removeClass('closed');
-		  video.setAttribute("src", insta_vid_list[videoIndex].url);
-		  video.load();
-		  video.play();
+	  	  player3.addClass('closed');
+		  player2.addClass('closed');
+		  setTimeout(function(){
+		  	video2.setAttribute("src", insta_vid_list[videoIndex+1].url);
+		  	video2.load();
+		  }, 1000)
 		  names.innerHTML = insta_vid_list[videoIndex].username;
 		  video.muted = true;
 		}else{
+		  video2.play();
+		  player2.removeClass('closed');
 		  player3.addClass('closed');
 		  player1.addClass('closed');
-		  player2.removeClass('closed');
-		  video2.setAttribute("src", insta_vid_list[videoIndex].url);
-		  video2.load();
-		  video2.play();
+		  setTimeout(function(){
+			  video.setAttribute("src", insta_vid_list[videoIndex+1].url);
+		  	  video.load();	
+		  }, 1000)
 		  names.innerHTML = insta_vid_list[videoIndex].username;
 		  video2.muted = true;
 		}
+		video3.pause();
 	  }
 
 	  var ending = function(){
-	  	clearTimeout(timer);
+	  	jaTimer = 10000;
 	  	fanTimer = 10000;
-	  	player2.addClass('closed');
-		player1.addClass('closed');
-		player3.removeClass('closed');
-		video3.setAttribute("src", jason_vid_list[jaCount]);
-		video3.load();
-		video3.play();
-		names.innerHTML = '';
-		video3.muted = true;
+	  	jaVid();
+	  }
+
+	  var closing = function(){
+	  	end.removeClass('closed');
+	  	clearTimeout(timer);
 	  }
 
 	});

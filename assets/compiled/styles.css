@@ -3,6 +3,12 @@
    The Grunt scripts will automatically merge all these files into /compiled/styles.css */
 /* colos */
 /*Fonts*/
+/* line 2, /Users/nattkua/Clients/modulus/jason/assets/styles/_fonts.scss */
+p {
+  font-family: 'Oswald', sans-serif;
+  font-size: 0.8em;
+}
+
 /* mixins */
 /* main */
 /* line 4, /Users/nattkua/Clients/modulus/jason/assets/styles/_main.scss */
@@ -49,14 +55,53 @@ html body .wrapper {
   width: 100%;
   z-index: 10;
 }
-/* line 14, /Users/nattkua/Clients/modulus/jason/assets/styles/_video.scss */
-.video_wrapper .cover .play_img {
+/* line 15, /Users/nattkua/Clients/modulus/jason/assets/styles/_video.scss */
+.video_wrapper .play_img {
   background-image: url('/images/ja_cover.jpg');
   cursor: pointer;
   height: 100%;
+  position: absolute;
+  opacity: 1;
+  top: 0;
   width: 100%;
+  z-index: 2;
+  -webkit-transition-property: opacity;
+  -moz-transition-property: opacity;
+  -o-transition-property: opacity;
+  transition-property: opacity;
+  -webkit-transition-duration: 2s;
+  -moz-transition-duration: 2s;
+  -o-transition-duration: 2s;
+  transition-duration: 2s;
+  -webkit-transition-timing-function: ease-in;
+  -moz-transition-timing-function: ease-in;
+  -o-transition-timing-function: ease-in;
+  transition-timing-function: ease-in;
 }
-/* line 21, /Users/nattkua/Clients/modulus/jason/assets/styles/_video.scss */
+/* line 28, /Users/nattkua/Clients/modulus/jason/assets/styles/_video.scss */
+.video_wrapper .end_img {
+  cursor: pointer;
+  height: 100%;
+  opacity: 1;
+  position: absolute;
+  top: 0;
+  padding: 3em;
+  width: 100%;
+  z-index: 1;
+  -webkit-transition-property: opacity;
+  -moz-transition-property: opacity;
+  -o-transition-property: opacity;
+  transition-property: opacity;
+  -webkit-transition-duration: 2s;
+  -moz-transition-duration: 2s;
+  -o-transition-duration: 2s;
+  transition-duration: 2s;
+  -webkit-transition-timing-function: ease-in;
+  -moz-transition-timing-function: ease-in;
+  -o-transition-timing-function: ease-in;
+  transition-timing-function: ease-in;
+}
+/* line 41, /Users/nattkua/Clients/modulus/jason/assets/styles/_video.scss */
 .video_wrapper video {
   display: block;
   height: 100%;
@@ -64,19 +109,19 @@ html body .wrapper {
   position: absolute;
   width: 100%;
 }
-/* line 28, /Users/nattkua/Clients/modulus/jason/assets/styles/_video.scss */
+/* line 48, /Users/nattkua/Clients/modulus/jason/assets/styles/_video.scss */
 .video_wrapper #v1 {
   z-index: 0;
 }
-/* line 31, /Users/nattkua/Clients/modulus/jason/assets/styles/_video.scss */
+/* line 51, /Users/nattkua/Clients/modulus/jason/assets/styles/_video.scss */
 .video_wrapper #v2 {
   z-index: 1;
 }
-/* line 34, /Users/nattkua/Clients/modulus/jason/assets/styles/_video.scss */
+/* line 54, /Users/nattkua/Clients/modulus/jason/assets/styles/_video.scss */
 .video_wrapper #v3 {
   z-index: 2;
 }
-/* line 37, /Users/nattkua/Clients/modulus/jason/assets/styles/_video.scss */
+/* line 57, /Users/nattkua/Clients/modulus/jason/assets/styles/_video.scss */
 .video_wrapper .usernames {
   font-family: Oswald, sans-serif;
   font-size: 0.8em;
@@ -87,7 +132,7 @@ html body .wrapper {
   top: 1em;
   z-index: 5;
 }
-/* line 47, /Users/nattkua/Clients/modulus/jason/assets/styles/_video.scss */
+/* line 67, /Users/nattkua/Clients/modulus/jason/assets/styles/_video.scss */
 .video_wrapper .controls {
   bottom: 0;
   position: relative;
@@ -100,7 +145,7 @@ html body .wrapper {
   width: 100%;
   z-index: 4;
 }
-/* line 57, /Users/nattkua/Clients/modulus/jason/assets/styles/_video.scss */
+/* line 77, /Users/nattkua/Clients/modulus/jason/assets/styles/_video.scss */
 .video_wrapper button {
   padding: 1.2em;
 }
@@ -158,18 +203,18 @@ footer {
 
 /* Animation */
 /* line 4, /Users/nattkua/Clients/modulus/jason/assets/styles/_animation.scss */
-.video_player {
+.video_wrapper .video_player {
   -webkit-transition-property: opacity;
   -moz-transition-property: opacity;
   -o-transition-property: opacity;
   transition-property: opacity;
-  -webkit-transition-duration: 0.8s;
-  -moz-transition-duration: 0.8s;
-  -o-transition-duration: 0.8s;
-  transition-duration: 0.8s;
+  -webkit-transition-duration: 1s;
+  -moz-transition-duration: 1s;
+  -o-transition-duration: 1s;
+  transition-duration: 1s;
 }
 
 /* line 9, /Users/nattkua/Clients/modulus/jason/assets/styles/_animation.scss */
-.closed {
+.closed, .video_wrapper .cover .closed {
   opacity: 0;
 }

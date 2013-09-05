@@ -11,12 +11,32 @@
         position: absolute;
         width: 100%;
         z-index: 10;
-        & .play_img{
-            background-image: image-url('ja_cover.jpg'); 
-            cursor: pointer;
-            height: 100%;
-            width:100%;
-        }
+    }
+    .play_img{
+        background-image: image-url('ja_cover.jpg'); 
+        cursor: pointer;
+        height: 100%;
+        position: absolute;
+        opacity: 1;
+        top: 0;
+        width: 100%;
+        z-index: 2;
+        @include transition-property(opacity);
+        @include transition-duration(2s);
+        @include transition-timing-function(ease-in);
+    }
+    .end_img{ 
+        cursor: pointer;
+        height: 100%;
+        opacity: 1;
+        position: absolute;
+        top: 0;
+        padding: 3em;
+        width: 100%;
+        z-index: 1;
+        @include transition-property(opacity);
+        @include transition-duration(2s);
+        @include transition-timing-function(ease-in);
     }
     video{
     	display: block;

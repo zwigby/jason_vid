@@ -1,11 +1,11 @@
 /* Animation */
 @import "compass/css3";
 
-.video_player{
+.video_wrapper .video_player{
   @include transition-property(opacity);
-  @include transition-duration(0.8s);
+  @include transition-duration(1s);
 }
 
-.closed{
+.closed, .video_wrapper .cover .closed{
 	opacity: 0;
 }
