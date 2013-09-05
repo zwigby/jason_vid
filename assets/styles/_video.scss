@@ -2,7 +2,7 @@
 .video_wrapper{
 	height: 30em;
 	margin: 0 auto;
-	max-width: 53.313em;
+	max-width: 30em;
 	position: relative;
 	width: 100%;
     @include rgba-background($white, 0.2);
@@ -10,10 +10,12 @@
         height: 100%;
         position: absolute;
         width: 100%;
-        z-index: 1;
+        z-index: 10;
         & .play_img{
-            margin: 0 auto;
-            width: 3em;
+            background-image: image-url('ja_cover.jpg'); 
+            cursor: pointer;
+            height: 100%;
+            width:100%;
         }
     }
     video{
@@ -33,21 +35,26 @@
         z-index: 2;
     }
     .usernames{
-        font-family: 'Oswald', sans-serif;
-        position: absolute;
-        z-index: 5;
+        font-family:Oswald, sans-serif;
+        font-size:0.8em;
+        font-weight:100;
+        letter-spacing:0.1em;
+        position:absolute;
+        right:2em;
+        top:1em;
+        z-index:5;
     }
     .controls{
-    	bottom: 0;
-    	@include rgba-background($bgColor, 0.2);
-    	left: 0;
-    	padding: 1.2em;
-    	position: absolute;
-    	text-align: center;
-    	width: 100%;
-    	z-index: 4
+        bottom: 0;
+        @include rgba-background($bgColor, 0.2);
+        left: 0;
+        padding: 1.2em;
+        position: absolute;
+        text-align: center;
+        width: 100%;
+        z-index: 4
     }
     button{
-    	padding: 1.2em;
+        padding: 1.2em;
     }
 }

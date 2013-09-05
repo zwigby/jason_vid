@@ -35,7 +35,7 @@ html body .wrapper {
 .video_wrapper {
   height: 30em;
   margin: 0 auto;
-  max-width: 53.313em;
+  max-width: 30em;
   position: relative;
   width: 100%;
   position: relative;
@@ -47,14 +47,16 @@ html body .wrapper {
   height: 100%;
   position: absolute;
   width: 100%;
-  z-index: 1;
+  z-index: 10;
 }
 /* line 14, /Users/nattkua/Clients/modulus/jason/assets/styles/_video.scss */
 .video_wrapper .cover .play_img {
-  margin: 0 auto;
-  width: 3em;
+  background-image: url('/images/ja_cover.jpg');
+  cursor: pointer;
+  height: 100%;
+  width: 100%;
 }
-/* line 19, /Users/nattkua/Clients/modulus/jason/assets/styles/_video.scss */
+/* line 21, /Users/nattkua/Clients/modulus/jason/assets/styles/_video.scss */
 .video_wrapper video {
   display: block;
   height: 100%;
@@ -62,25 +64,30 @@ html body .wrapper {
   position: absolute;
   width: 100%;
 }
-/* line 26, /Users/nattkua/Clients/modulus/jason/assets/styles/_video.scss */
+/* line 28, /Users/nattkua/Clients/modulus/jason/assets/styles/_video.scss */
 .video_wrapper #v1 {
   z-index: 0;
 }
-/* line 29, /Users/nattkua/Clients/modulus/jason/assets/styles/_video.scss */
+/* line 31, /Users/nattkua/Clients/modulus/jason/assets/styles/_video.scss */
 .video_wrapper #v2 {
   z-index: 1;
 }
-/* line 32, /Users/nattkua/Clients/modulus/jason/assets/styles/_video.scss */
+/* line 34, /Users/nattkua/Clients/modulus/jason/assets/styles/_video.scss */
 .video_wrapper #v3 {
   z-index: 2;
 }
-/* line 35, /Users/nattkua/Clients/modulus/jason/assets/styles/_video.scss */
+/* line 37, /Users/nattkua/Clients/modulus/jason/assets/styles/_video.scss */
 .video_wrapper .usernames {
-  font-family: 'Oswald', sans-serif;
+  font-family: Oswald, sans-serif;
+  font-size: 0.8em;
+  font-weight: 100;
+  letter-spacing: 0.1em;
   position: absolute;
+  right: 2em;
+  top: 1em;
   z-index: 5;
 }
-/* line 40, /Users/nattkua/Clients/modulus/jason/assets/styles/_video.scss */
+/* line 47, /Users/nattkua/Clients/modulus/jason/assets/styles/_video.scss */
 .video_wrapper .controls {
   bottom: 0;
   position: relative;
@@ -93,7 +100,7 @@ html body .wrapper {
   width: 100%;
   z-index: 4;
 }
-/* line 50, /Users/nattkua/Clients/modulus/jason/assets/styles/_video.scss */
+/* line 57, /Users/nattkua/Clients/modulus/jason/assets/styles/_video.scss */
 .video_wrapper button {
   padding: 1.2em;
 }

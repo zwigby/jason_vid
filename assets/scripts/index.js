@@ -3,11 +3,13 @@
    You don't need to include requirejs yourself!
    The Grunt scripts will automatically merge all these files into /compiled/scripts.js */
    $(function() {
+   	    var out = []; 
 		var insta_vid_list = [];
 		var insta_vid_list2 = [];
-		var jason_vid_list = ['../images/ja_clips/ja_clip_1.mp4','../images/ja_clips/ja_clip_7.mp4'];
+		var jason_vid_list = ['../images/ja_clips/ja_clip_1.mp4','../images/ja_clips/ja_clip_2.mp4','../images/ja_clips/ja_clip_3.mp4','../images/ja_clips/ja_clip_4.mp4','../images/ja_clips/ja_clip_5.mp4','../images/ja_clips/ja_clip_6.mp4','../images/ja_clips/ja_clip_7.mp4'];
 		var fanTimer = 5;
 		var jaTimer = 20;
+
 		//Video and Audio
 		var video = document.getElementById('v1');
 		var video2 = document.getElementById('v2');
@@ -21,6 +23,7 @@
 		var videoIndex = 0;
 		var clipCount = 0;
 		var jaCount = 0;
+		var timer;
 
 		//play and close
 		var cover = $("#play_img");
@@ -29,18 +32,11 @@
 		var player3 = $("#video_player3");
 
 		// Buttons
-		var start = document.getElementById("start");
-		var playButton = document.getElementById("play-pause");
-		var muteButton = document.getElementById("mute");
-		var fullScreenButton = document.getElementById("full-screen");
-
-		// Sliders
-		var seekBar = document.getElementById("seek-bar");
-		var volumeBar = document.getElementById("volume-bar");
+		var start = document.getElementById("play_img");
 
 		//preprocessor
 		//first page of vids
-		for(var i=0;i<solidus.context.resources.vids.data.length; i++)
+		for(var i=0;i<solidus.context.resources.vids.data.length-1; i++)
 	    {
 
 	       if(typeof solidus.context.resources.vids.data[i].videos !== 'undefined'){
@@ -62,9 +58,49 @@
 	           url: solidus.context.resources.moreVids.data[i].videos.low_resolution.url,
 	           username: solidus.context.resources.moreVids.data[i].user.username
 	         });    
-	       }
-	       
+	       } 
 	    }
+
+	    /*// randomize videos
+		var out = [];
+		// have to reverse the for loop because we're going to remove elements each time
+		for(i = insta_vid_list.length; i >= 0; i--) {
+		  // create a random index
+		  var random = Math.round(Math.random() * insta_vid_list.length);
+		  // push a video from the incoming video to the out while taking it out of the inVids array
+		  //if(typeof insta_vid_list[i].url !== 'undefined'){
+		  	
+		  	out.push(insta_vid_list.splice(random, 1));
+		  	
+		  //}
+		}*/
+
+		function shuffle(array){
+		  var currentIndex = array.length;
+
+		  // While there remain elements to shuffle...
+		  for(i = currentIndex; i >= 0; i--) {
+
+		    // Pick a remaining element...
+		    randomIndex = Math.floor(Math.random() * currentIndex);
+
+		    temporaryValue = array[currentIndex];
+		    array[currentIndex] = array[randomIndex];
+		    array[randomIndex] = temporaryValue;
+
+		  }
+
+		  return array;
+		}										
+
+		console.dir(insta_vid_list);
+		shuffle(insta_vid_list);
+		for(i = 0; i <= insta_vid_list.length; i++){
+		  	if(insta_vid_list[i] === undefined){
+		  		insta_vid_list.splice(i,1);
+		  	}
+		  }
+		console.dir(insta_vid_list);
 
 	    video.setAttribute("src", insta_vid_list[videoIndex].url);
   		video.load();
@@ -77,24 +113,25 @@
       		video.play();
       		audio.play();
       		names.innerHTML = insta_vid_list[videoIndex].username;
-      		setTimeout(checkAudioTime, 1000);
-		    
+      		timer = setTimeout(checkAudioTime, 1000);
 	    });
 
 	  //audio time check
 	  var checkAudioTime = function(){
-	  	if(audio.currentTime.toFixed(0) == fanTimer && audio.currentTime.toFixed(0) != jaTimer){
+	  	if(audio.currentTime.toFixed(0) === 210){
+	  		return ending();
+	  	}else if(audio.currentTime.toFixed(0) == fanTimer && audio.currentTime.toFixed(0) != jaTimer){
 	  		fanTimer = fanTimer + 5;
 	  		fanVid();
+	  		timer = setTimeout(checkAudioTime, 1000);
 	  	}else if(audio.currentTime.toFixed(0) == jaTimer){
 	  		jaTimer = jaTimer + 30;
 	  		fanTimer = fanTimer + 10;
 	  		jaVid();
+	  		timer = setTimeout(checkAudioTime, 1000);
 	  	}else{
-	  		
+	  		timer = setTimeout(checkAudioTime, 1000);
 	  	}
-	  	
-	  	setTimeout(checkAudioTime, 1000);
 	  }
 
 	  //Jason video
@@ -136,47 +173,17 @@
 		}
 	  }
 
-	  //Video Controls
-      // Event listener for the play/pause button
-      playButton.addEventListener("click", function() {
-      if (video.paused == true && audio.paused == true) {
-      // Play the video
-      video.play();
-      audio.play();
-
-      // Update the button text to 'Pause'
-      playButton.innerHTML = "Pause";
-      } else {
-      // Pause the video
-      video.pause();
-      audio.pause();
-
-      // Update the button text to 'Play'
-      playButton.innerHTML = "Play";
-      }
-      });
-
-      // Event listener for the mute button
-      muteButton.addEventListener("click", function() {
-      if (audio.muted == false) {
-      // Mute the video
-      audio.muted = true;
-
-      // Update the button text
-      muteButton.innerHTML = "Unmute";
-      } else {
-      // Unmute the video
-      audio.muted = false;
-
-      // Update the button text
-      muteButton.innerHTML = "Mute";
-      }
-      });
-
-      // Event listener for the volume bar
-      volumeBar.addEventListener("change", function() {
-      // Update the video volume
-      audio.volume = volumeBar.value;
-      });
+	  var ending = function(){
+	  	clearTimeout(timer);
+	  	fanTimer = 10000;
+	  	player2.addClass('closed');
+		player1.addClass('closed');
+		player3.removeClass('closed');
+		video3.setAttribute("src", jason_vid_list[jaCount]);
+		video3.load();
+		video3.play();
+		names.innerHTML = '';
+		video3.muted = true;
+	  }
 
 	});
