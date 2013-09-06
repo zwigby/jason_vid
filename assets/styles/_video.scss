@@ -1,8 +1,8 @@
 /* Video */
 .video_wrapper{
-	height: 30em;
+	height: 37.5em;
 	margin: 0 auto;
-	max-width: 30em;
+	max-width: 37.5em;
 	position: relative;
 	width: 100%;
     @include rgba-background($white, 0.2);
@@ -14,6 +14,7 @@
     }
     .play_img{
         background-image: image-url('ja_cover.jpg'); 
+        background-size: cover;
         cursor: pointer;
         height: 100%;
         position: absolute;

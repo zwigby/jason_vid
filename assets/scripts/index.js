@@ -106,7 +106,7 @@
   		video2.setAttribute("src", insta_vid_list[videoIndex+1].url);
   		video.load();
   		video.muted = true;
-  		video3.setAttribute("src", "../images/ja_clips/ja_clip_full.mp4");
+  		video3.setAttribute("src", "../images/ja_clips/ja_clip_fixed.mp4");
   		video3.load();
   		video3.muted = true;
   		audio.setAttribute("src", "../music/ja-nt.mp3");
@@ -122,7 +122,7 @@
 
 	  //audio time check
 	  var checkAudioTime = function(){
-	  	if(audio.currentTime.toFixed(0) == 226){
+	  	if(audio.currentTime.toFixed(0) == 220){
 	  		closing();
 	  	}else if(audio.currentTime.toFixed(0) == 200){
 	  		console.log('ending');
@@ -187,7 +187,9 @@
 		  names.innerHTML = insta_vid_list[videoIndex].username;
 		  video2.muted = true;
 		}
-		video3.pause();
+		setTimeout(function(){
+		  video3.pause();	
+		}, 500);
 	  }
 
 	  var ending = function(){

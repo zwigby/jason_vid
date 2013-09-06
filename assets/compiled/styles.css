@@ -39,9 +39,9 @@ html body .wrapper {
 /* Video */
 /* line 2, /Users/nattkua/Clients/modulus/jason/assets/styles/_video.scss */
 .video_wrapper {
-  height: 30em;
+  height: 37.5em;
   margin: 0 auto;
-  max-width: 30em;
+  max-width: 37.5em;
   position: relative;
   width: 100%;
   position: relative;
@@ -58,6 +58,7 @@ html body .wrapper {
 /* line 15, /Users/nattkua/Clients/modulus/jason/assets/styles/_video.scss */
 .video_wrapper .play_img {
   background-image: url('/images/ja_cover.jpg');
+  background-size: cover;
   cursor: pointer;
   height: 100%;
   position: absolute;
@@ -78,7 +79,7 @@ html body .wrapper {
   -o-transition-timing-function: ease-in;
   transition-timing-function: ease-in;
 }
-/* line 28, /Users/nattkua/Clients/modulus/jason/assets/styles/_video.scss */
+/* line 29, /Users/nattkua/Clients/modulus/jason/assets/styles/_video.scss */
 .video_wrapper .end_img {
   cursor: pointer;
   height: 100%;
@@ -101,7 +102,7 @@ html body .wrapper {
   -o-transition-timing-function: ease-in;
   transition-timing-function: ease-in;
 }
-/* line 41, /Users/nattkua/Clients/modulus/jason/assets/styles/_video.scss */
+/* line 42, /Users/nattkua/Clients/modulus/jason/assets/styles/_video.scss */
 .video_wrapper video {
   display: block;
   height: 100%;
@@ -109,19 +110,19 @@ html body .wrapper {
   position: absolute;
   width: 100%;
 }
-/* line 48, /Users/nattkua/Clients/modulus/jason/assets/styles/_video.scss */
+/* line 49, /Users/nattkua/Clients/modulus/jason/assets/styles/_video.scss */
 .video_wrapper #v1 {
   z-index: 0;
 }
-/* line 51, /Users/nattkua/Clients/modulus/jason/assets/styles/_video.scss */
+/* line 52, /Users/nattkua/Clients/modulus/jason/assets/styles/_video.scss */
 .video_wrapper #v2 {
   z-index: 1;
 }
-/* line 54, /Users/nattkua/Clients/modulus/jason/assets/styles/_video.scss */
+/* line 55, /Users/nattkua/Clients/modulus/jason/assets/styles/_video.scss */
 .video_wrapper #v3 {
   z-index: 2;
 }
-/* line 57, /Users/nattkua/Clients/modulus/jason/assets/styles/_video.scss */
+/* line 58, /Users/nattkua/Clients/modulus/jason/assets/styles/_video.scss */
 .video_wrapper .usernames {
   font-family: Oswald, sans-serif;
   font-size: 0.8em;
@@ -132,7 +133,7 @@ html body .wrapper {
   top: 1em;
   z-index: 5;
 }
-/* line 67, /Users/nattkua/Clients/modulus/jason/assets/styles/_video.scss */
+/* line 68, /Users/nattkua/Clients/modulus/jason/assets/styles/_video.scss */
 .video_wrapper .controls {
   bottom: 0;
   position: relative;
@@ -145,7 +146,7 @@ html body .wrapper {
   width: 100%;
   z-index: 4;
 }
-/* line 77, /Users/nattkua/Clients/modulus/jason/assets/styles/_video.scss */
+/* line 78, /Users/nattkua/Clients/modulus/jason/assets/styles/_video.scss */
 .video_wrapper button {
   padding: 1.2em;
 }
