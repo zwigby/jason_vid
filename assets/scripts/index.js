@@ -159,6 +159,8 @@
 	  	}
 	  }
 
+	  
+
 	  //Jason video
 	  var jaVid = function(){	  	
 		player3.removeClass('closed');
