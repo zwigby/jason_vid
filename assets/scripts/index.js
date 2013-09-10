@@ -112,23 +112,19 @@
       				video3.play();
       				names.innerHTML = '';
       			};
-      			//audio.play();
+      			video3.play();
 	      		timer = setTimeout(checkAudioTime, 1000);
 	      		clickCount++;
       		}else{
 	      		if (player3.hasClass('closed')&&player2.hasClass('closed')) {
       				video.pause();
-		      		//audio.pause();
-		      		clearTimeout(timer);
       			}else if(player3.hasClass('closed')&&player1.hasClass('closed')){
       				video2.pause();
-		      		//audio.pause();
-		      		clearTimeout(timer);
       			}else{
       				video3.pause();
-		      		//audio.pause();
-		      		clearTimeout(timer);
       			};
+      			clearTimeout(timer);
+      			video3.pause();
 	      		clickCount++;
       		};
 
@@ -158,8 +154,6 @@
 	  		console.log(video3.currentTime.toFixed(0));
 	  	}
 	  }
-
-	  
 
 	  //Jason video
 	  var jaVid = function(){	  	

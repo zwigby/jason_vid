@@ -1,11 +1,27 @@
 /* Video */
 .video_wrapper{
-	height: 37.5em;
+	height: 50em;
 	margin: 0 auto;
-	max-width: 37.5em;
+	max-width: 50em;
 	position: relative;
 	width: 100%;
     @include rgba-background($white, 0.2);
+    .letterbox-top{
+        background-color: #000;
+        height: 10em;
+        top: 0;
+        position: absolute;
+        width: 100%;
+        z-index: 9;
+    }
+    .letterbox-bottom{
+        background-color: #000;
+        bottom: 0;
+        height: 10em;
+        position: absolute;
+        width: 100%;
+        z-index: 9;
+    }
     .cover{
         height: 100%;
         position: absolute;
@@ -53,6 +69,10 @@
         z-index: 1;
     }
     #v3{
+        height: 37.5em;
+        margin-top: -18.75em;
+        top: 50%;
+        width: 50em;
         z-index: 2;
     }
     .usernames{

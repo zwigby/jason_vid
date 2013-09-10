@@ -39,9 +39,9 @@ html body .wrapper {
 /* Video */
 /* line 2, /Users/nattkua/Clients/modulus/jason/assets/styles/_video.scss */
 .video_wrapper {
-  height: 37.5em;
+  height: 50em;
   margin: 0 auto;
-  max-width: 37.5em;
+  max-width: 50em;
   position: relative;
   width: 100%;
   position: relative;
@@ -49,13 +49,31 @@ html body .wrapper {
   background: rgba(239, 239, 239, 0.2);
 }
 /* line 9, /Users/nattkua/Clients/modulus/jason/assets/styles/_video.scss */
+.video_wrapper .letterbox-top {
+  background-color: #000;
+  height: 10em;
+  top: 0;
+  position: absolute;
+  width: 100%;
+  z-index: 9;
+}
+/* line 17, /Users/nattkua/Clients/modulus/jason/assets/styles/_video.scss */
+.video_wrapper .letterbox-bottom {
+  background-color: #000;
+  bottom: 0;
+  height: 10em;
+  position: absolute;
+  width: 100%;
+  z-index: 9;
+}
+/* line 25, /Users/nattkua/Clients/modulus/jason/assets/styles/_video.scss */
 .video_wrapper .cover {
   height: 100%;
   position: absolute;
   width: 100%;
   z-index: 10;
 }
-/* line 15, /Users/nattkua/Clients/modulus/jason/assets/styles/_video.scss */
+/* line 31, /Users/nattkua/Clients/modulus/jason/assets/styles/_video.scss */
 .video_wrapper .play_img {
   background-image: url('/images/ja_cover.jpg');
   background-size: cover;
@@ -79,7 +97,7 @@ html body .wrapper {
   -o-transition-timing-function: ease-in;
   transition-timing-function: ease-in;
 }
-/* line 29, /Users/nattkua/Clients/modulus/jason/assets/styles/_video.scss */
+/* line 45, /Users/nattkua/Clients/modulus/jason/assets/styles/_video.scss */
 .video_wrapper .end_img {
   cursor: pointer;
   height: 100%;
@@ -102,7 +120,7 @@ html body .wrapper {
   -o-transition-timing-function: ease-in;
   transition-timing-function: ease-in;
 }
-/* line 42, /Users/nattkua/Clients/modulus/jason/assets/styles/_video.scss */
+/* line 58, /Users/nattkua/Clients/modulus/jason/assets/styles/_video.scss */
 .video_wrapper video {
   display: block;
   height: 100%;
@@ -110,19 +128,23 @@ html body .wrapper {
   position: absolute;
   width: 100%;
 }
-/* line 49, /Users/nattkua/Clients/modulus/jason/assets/styles/_video.scss */
+/* line 65, /Users/nattkua/Clients/modulus/jason/assets/styles/_video.scss */
 .video_wrapper #v1 {
   z-index: 0;
 }
-/* line 52, /Users/nattkua/Clients/modulus/jason/assets/styles/_video.scss */
+/* line 68, /Users/nattkua/Clients/modulus/jason/assets/styles/_video.scss */
 .video_wrapper #v2 {
   z-index: 1;
 }
-/* line 55, /Users/nattkua/Clients/modulus/jason/assets/styles/_video.scss */
+/* line 71, /Users/nattkua/Clients/modulus/jason/assets/styles/_video.scss */
 .video_wrapper #v3 {
+  height: 37.5em;
+  margin-top: -18.75em;
+  top: 50%;
+  width: 50em;
   z-index: 2;
 }
-/* line 58, /Users/nattkua/Clients/modulus/jason/assets/styles/_video.scss */
+/* line 78, /Users/nattkua/Clients/modulus/jason/assets/styles/_video.scss */
 .video_wrapper .usernames {
   font-family: Oswald, sans-serif;
   font-size: 0.8em;
@@ -133,7 +155,7 @@ html body .wrapper {
   top: 1em;
   z-index: 5;
 }
-/* line 68, /Users/nattkua/Clients/modulus/jason/assets/styles/_video.scss */
+/* line 88, /Users/nattkua/Clients/modulus/jason/assets/styles/_video.scss */
 .video_wrapper .controls {
   bottom: 0;
   position: relative;
@@ -146,7 +168,7 @@ html body .wrapper {
   width: 100%;
   z-index: 4;
 }
-/* line 78, /Users/nattkua/Clients/modulus/jason/assets/styles/_video.scss */
+/* line 98, /Users/nattkua/Clients/modulus/jason/assets/styles/_video.scss */
 .video_wrapper button {
   padding: 1.2em;
 }
