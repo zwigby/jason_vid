@@ -7,8 +7,8 @@
 		var insta_vid_list = [];
 		var insta_vid_list2 = [];
 		var jason_vid_list = ['../images/ja_clips/ja_clip_1.mp4','../images/ja_clips/ja_clip_2.mp4','../images/ja_clips/ja_clip_3.mp4','../images/ja_clips/ja_clip_4.mp4','../images/ja_clips/ja_clip_5.mp4','../images/ja_clips/ja_clip_6.mp4','../images/ja_clips/ja_clip_7.mp4'];
-		var fanTimer = 5;
-		var jaTimer = 20;
+		var fanTimer = 12;
+		var jaTimer = 27;
 
 		//Video and Audio
 		var video = document.getElementById('v1');
@@ -34,6 +34,7 @@
 
 		// Buttons
 		var start = document.getElementById("play_img");
+		var clickCount = 0;
 
 		//preprocessor
 		//first page of vids
@@ -61,20 +62,6 @@
 	         });    
 	       } 
 	    }
-
-	    /*// randomize videos
-		var out = [];
-		// have to reverse the for loop because we're going to remove elements each time
-		for(i = insta_vid_list.length; i >= 0; i--) {
-		  // create a random index
-		  var random = Math.round(Math.random() * insta_vid_list.length);
-		  // push a video from the incoming video to the out while taking it out of the inVids array
-		  //if(typeof insta_vid_list[i].url !== 'undefined'){
-		  	
-		  	out.push(insta_vid_list.splice(random, 1));
-		  	
-		  //}
-		}*/
 
 		function shuffle(array){
 		  var currentIndex = array.length;
@@ -106,56 +93,81 @@
   		video2.setAttribute("src", insta_vid_list[videoIndex+1].url);
   		video.load();
   		video.muted = true;
-  		video3.setAttribute("src", "../images/ja_clips/ja_clip_fixed.mp4");
+  		video3.setAttribute("src", "../images/ja_clips/jason_full_vid.mp4");
   		video3.load();
-  		video3.muted = true;
-  		audio.setAttribute("src", "../music/ja-nt.mp3");
-	    audio.load();
+  		//video3.muted = true;
+  		/*audio.setAttribute("src", "../music/ja-nt.mp3");
+	    audio.load();*/
 
 	    start.addEventListener("click", function() {
-      		cover.addClass('closed');
-      		video.play();
-      		audio.play();
-      		names.innerHTML = insta_vid_list[videoIndex].username;
-      		timer = setTimeout(checkAudioTime, 1000);
+      		if (clickCount % 2 == 0) {
+      			cover.addClass('closed');
+      			if (player3.hasClass('closed')&&player2.hasClass('closed')) {
+      				video.play();
+      				names.innerHTML = insta_vid_list[videoIndex].username;
+      			}else if(player3.hasClass('closed')&&player1.hasClass('closed')){
+      				video2.play();
+      				names.innerHTML = insta_vid_list[videoIndex].username;
+      			}else{
+      				video3.play();
+      				names.innerHTML = '';
+      			};
+      			//audio.play();
+	      		timer = setTimeout(checkAudioTime, 1000);
+	      		clickCount++;
+      		}else{
+	      		if (player3.hasClass('closed')&&player2.hasClass('closed')) {
+      				video.pause();
+		      		//audio.pause();
+		      		clearTimeout(timer);
+      			}else if(player3.hasClass('closed')&&player1.hasClass('closed')){
+      				video2.pause();
+		      		//audio.pause();
+		      		clearTimeout(timer);
+      			}else{
+      				video3.pause();
+		      		//audio.pause();
+		      		clearTimeout(timer);
+      			};
+	      		clickCount++;
+      		};
+
 	    });
 
 	  //audio time check
 	  var checkAudioTime = function(){
-	  	if(audio.currentTime.toFixed(0) == 220){
+	  	if(video3.currentTime.toFixed(0) == 220){
 	  		closing();
-	  	}else if(audio.currentTime.toFixed(0) == 200){
+	  	}else if(video3.currentTime.toFixed(0) == 215){
 	  		console.log('ending');
 	  		ending();
 	  		timer = setTimeout(checkAudioTime, 1000);
-	  	}else if(audio.currentTime.toFixed(0) == fanTimer && audio.currentTime.toFixed(0) != jaTimer){
+	  	}else if(video3.currentTime.toFixed(0) == fanTimer && video3.currentTime.toFixed(0) != jaTimer){
 	  		fanTimer = fanTimer + 5;
 	  		fanVid();
 	  		timer = setTimeout(checkAudioTime, 1000);
 	  		console.log('fan');
-	  	}else if(audio.currentTime.toFixed(0) == jaTimer){
-	  		jaTimer = jaTimer + 30;
+	  	}else if(video3.currentTime.toFixed(0) == jaTimer){
+	  		jaTimer = jaTimer + 25;
 	  		fanTimer = fanTimer + 10;
 	  		jaVid();
 	  		timer = setTimeout(checkAudioTime, 1000);;
 	  		console.log('jason');
 	  	}else{
 	  		timer = setTimeout(checkAudioTime, 1000);;
-	  		console.log(audio.currentTime.toFixed(0));
+	  		console.log(video3.currentTime.toFixed(0));
 	  	}
 	  }
 
 	  //Jason video
-	  var jaVid = function(){
-	  	if(jaCount >= jason_vid_list.length) jaCount = 0;
-	  	video3.play();
-	  	if(!video3.paused){
-			player3.removeClass('closed');
-			player2.addClass('closed');
-			player1.addClass('closed');
-	  	}
-		video.setAttribute("src", insta_vid_list[videoIndex+1].url);
-		video.load();
+	  var jaVid = function(){	  	
+		player3.removeClass('closed');
+		player2.addClass('closed');
+		player1.addClass('closed');
+		setTimeout(function(){
+			  video.setAttribute("src", insta_vid_list[videoIndex+1].url);
+		  	  video.load();	
+		  }, 1000);
 		names.innerHTML = '';
 		jaCount++;
 	  }
@@ -172,7 +184,7 @@
 		  setTimeout(function(){
 		  	video2.setAttribute("src", insta_vid_list[videoIndex+1].url);
 		  	video2.load();
-		  }, 1000)
+		  }, 1000);
 		  names.innerHTML = insta_vid_list[videoIndex].username;
 		  video.muted = true;
 		}else{
@@ -183,12 +195,12 @@
 		  setTimeout(function(){
 			  video.setAttribute("src", insta_vid_list[videoIndex+1].url);
 		  	  video.load();	
-		  }, 1000)
+		  }, 1000);
 		  names.innerHTML = insta_vid_list[videoIndex].username;
 		  video2.muted = true;
 		}
 		setTimeout(function(){
-		  video3.pause();	
+		  //video3.pause();	
 		}, 500);
 	  }
 
@@ -200,6 +212,7 @@
 
 	  var closing = function(){
 	  	end.removeClass('closed');
+	  	cover.css({display: 'none'});
 	  	clearTimeout(timer);
 	  }
 
