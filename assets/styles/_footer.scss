@@ -1,0 +1,21 @@
+/* social */
+footer{
+  margin: 0 auto;
+  max-width: 37em;
+	padding: 0 2em;
+	text-align: center;
+	width: 100%;
+  .spark-logo{
+    background-image: image-url('sparkart-logo.png');
+    background-size: cover;
+    height: 1.45em;
+    margin: 1em auto;
+    text-indent: -9999px;
+    width: 5em;
+    a{
+      display: block;
+      height: 100%;
+      width: 100%;
+    }
+  }
+}

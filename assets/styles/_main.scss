@@ -9,16 +9,25 @@
 
 html{
 	body{
+		background-image: image-url('bg.jpg');
+		background-size: cover;
+		background-attachment: fixed;
+		background-repeat: no-repeat;
 		.wrapper{
 			color: $white;
-			background-image: image-url('bg-format-01.jpg');
-			background-size: cover;
-			background-position: fixed;
+			margin: 0 auto;
+			max-width: 65em;
 			min-height: 100%;
-			position: absolute;
+			padding: 3em;
+			position: relative;
 			width: 100%;
+			@media screen and (max-width: 36em){
+				padding: 0;
+				position: static;
+			}
 		}
-		height: 100%;
+		min-height: 100%;
+		position: absolute;
 		width: 100%;
 	}
 }

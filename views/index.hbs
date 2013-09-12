@@ -12,15 +12,25 @@
 }}
 
 <section class="wrapper">
-	<header class="logo">
-		<h1>{{page.title}}</h1>
-	</header>
+	<div class="hash-info">
+		{{> hash}}
+	</div>
+	<div class="logo-wrap">
+		{{> logo}}
+	</div>
 	<div class="video_wrapper">
 		{{> video}}
 	</div>
+	<div class="phone_wrapper">
+		{{> phone}}
+	</div>
+	<div class="pre-order">
+		{{> order}}
+	</div>
+	<div class="chat_wrapper">
+			{{> chat}}
+	</div>
 	<footer>
-		<nav>
-			{{> social}}
-		</nav>
-	</footer>
+		{{> footer}}
+	</footer> 
 </section>

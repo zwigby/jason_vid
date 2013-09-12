@@ -1,0 +1,30 @@
+/* phone  styles */
+
+.phone_wrapper{
+	@media screen and (max-width : 36em)  {
+		display: block;
+		height: 10em;
+		margin: 0 auto;
+		position: relative;
+		text-align: center;
+		top: 7em;
+		width: 90%;
+	}
+	@media screen and (min-width: 36em){
+		display: none;
+	}
+	#phone_v{
+		display: none;
+		height: 100%;
+		width: 100%;
+	}
+    #click{
+    	background-color: $gold;
+    	cursor: pointer;
+    	display: block;
+    	height: 100%;
+    	position: absolute;
+    	width: 100%;
+    	z-index: 25;
+    }
+}

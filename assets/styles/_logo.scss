@@ -1,14 +1,75 @@
 /* Logo */
-.logo{
+.logo-wrap{
 	padding: 2em;
+	max-width: 36em;
 	width: 100%;
-	h1{
-		color: $white;
-		font-family: 'Oswald', sans-serif;
-		font-size: 3em;
-		font-weight: 700;
-		letter-spacing: 0.1em;
+	position: relative;
+	margin: 0 auto;
+	top: 5em;
+	@media screen and (max-width: 36em){
+		height: 8em;
+		margin: 0em auto 15em;
+		max-width: 36em;
+		padding: 0;
+		position: absolute;
+		width: 100%;
+		top:0;
 		text-align: center;
-		text-transform: uppercase;
+	}
+	.logo{
+		background-image: url("/images/ja-logo.png");
+		background-size: cover;
+		height: 3.3335em;
+		text-indent: -9999px;
+		width: 9.25em;
+		position: absolute;
+		top: -0.3em;
+		left: -2.2em;
+		z-index: 20;
+		@media screen and (max-width: 36em){
+			margin: 0 auto;
+			text-indent: -9999px;
+			position: static;
+		}
+	}
+	.facebook{
+		background-image: url("/images/facebook-logo.png");
+		background-size: cover;
+		border-radius: 3em;
+		height: 4em;
+		text-indent: -9999px;
+		width: 4em;
+		position: absolute;
+		top: 1.8em;
+		right: -1.8em;
+		z-index: 19;
+		@media screen and (max-width: 36em){
+			display: inline-block;
+			height: 3em;
+			margin: 0 auto;
+			text-indent: -9999px;
+			position: static;
+			width: 3em;
+		}
+	}
+	.instagram{
+		background-image: url("/images/ig-logo.png");
+		background-size: cover;
+		border-radius: 3em;
+		height: 5em;
+		text-indent: -9999px;
+		width: 5em;
+		position: absolute;
+		top: -1em;
+		right: 0em;
+		z-index: 20;
+		@media screen and (max-width: 36em){
+			display: inline-block;
+			height: 3em;
+			margin: 0 auto;
+			text-indent: -9999px;
+			position: static;
+			width: 3em;
+		}	
 	}
 }
