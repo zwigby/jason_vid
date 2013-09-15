@@ -108,6 +108,8 @@ a{
 		}
 	}
 	a{
+		background-image: image-url('button.png');
+		background-size: cover;
 		-webkit-box-shadow:  1px 1px 50px 3px rgba(0, 0, 0, .4);
         box-shadow:  1px 1px 50px 3px rgba(0, 0, 0, .4);
 		color: $darkGrey;
@@ -121,8 +123,8 @@ a{
 		position: relative;
 		text-transform: uppercase;
 		text-align: right;
-		@include filter-gradient(#a3c2ec, #cfdff5, vertical); 
-		@include background-image(linear-gradient(top,  #cfdff5 0%,#92bdf4 46%,#a3c2ec 99%));
+		/* @include filter-gradient(#a3c2ec, #cfdff5, vertical); 
+		@include background-image(linear-gradient(top,  #cfdff5 0%,#92bdf4 46%,#a3c2ec 99%)); */
 		width: 95%;
 		img{
 			position: absolute;

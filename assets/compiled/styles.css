@@ -135,6 +135,8 @@ a {
 }
 /* line 110, /Users/nattkua/Clients/modulus/jason/assets/styles/_fonts.scss */
 .pre-order a {
+  background-image: url('/images/button.png');
+  background-size: cover;
   -webkit-box-shadow: 1px 1px 50px 3px rgba(0, 0, 0, 0.4);
   box-shadow: 1px 1px 50px 3px rgba(0, 0, 0, 0.4);
   color: #282828;
@@ -148,23 +150,18 @@ a {
   position: relative;
   text-transform: uppercase;
   text-align: right;
-  *zoom: 1;
-  filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FFA3C2EC', endColorstr='#FFCFDFF5');
-  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #cfdff5), color-stop(46%, #92bdf4), color-stop(99%, #a3c2ec));
-  background-image: -webkit-linear-gradient(top, #cfdff5 0%, #92bdf4 46%, #a3c2ec 99%);
-  background-image: -moz-linear-gradient(top, #cfdff5 0%, #92bdf4 46%, #a3c2ec 99%);
-  background-image: -o-linear-gradient(top, #cfdff5 0%, #92bdf4 46%, #a3c2ec 99%);
-  background-image: linear-gradient(top, #cfdff5 0%, #92bdf4 46%, #a3c2ec 99%);
+  /* @include filter-gradient(#a3c2ec, #cfdff5, vertical); 
+  @include background-image(linear-gradient(top,  #cfdff5 0%,#92bdf4 46%,#a3c2ec 99%)); */
   width: 95%;
 }
-/* line 127, /Users/nattkua/Clients/modulus/jason/assets/styles/_fonts.scss */
+/* line 129, /Users/nattkua/Clients/modulus/jason/assets/styles/_fonts.scss */
 .pre-order a img {
   position: absolute;
   width: 25px;
   left: 0.5em;
 }
 
-/* line 136, /Users/nattkua/Clients/modulus/jason/assets/styles/_fonts.scss */
+/* line 138, /Users/nattkua/Clients/modulus/jason/assets/styles/_fonts.scss */
 .chat_wrapper h2 {
   color: white;
   font-size: 0.9em;
@@ -172,26 +169,26 @@ a {
   text-shadow: 3px 3px 2px #000000;
   filter: dropshadow(color=black, offx=1, offy=1);
 }
-/* line 142, /Users/nattkua/Clients/modulus/jason/assets/styles/_fonts.scss */
+/* line 144, /Users/nattkua/Clients/modulus/jason/assets/styles/_fonts.scss */
 .chat_wrapper h2 span {
   color: white;
   font-size: 1.2em;
 }
-/* line 146, /Users/nattkua/Clients/modulus/jason/assets/styles/_fonts.scss */
+/* line 148, /Users/nattkua/Clients/modulus/jason/assets/styles/_fonts.scss */
 .chat_wrapper h2 .date {
   color: #a3c3ed;
 }
-/* line 150, /Users/nattkua/Clients/modulus/jason/assets/styles/_fonts.scss */
+/* line 152, /Users/nattkua/Clients/modulus/jason/assets/styles/_fonts.scss */
 .chat_wrapper a, .chat_wrapper a:visited {
   color: #a3c3ed;
   font-size: 1.2em;
 }
-/* line 153, /Users/nattkua/Clients/modulus/jason/assets/styles/_fonts.scss */
+/* line 155, /Users/nattkua/Clients/modulus/jason/assets/styles/_fonts.scss */
 .chat_wrapper a :hover, .chat_wrapper a:visited :hover {
   color: white;
 }
 
-/* line 160, /Users/nattkua/Clients/modulus/jason/assets/styles/_fonts.scss */
+/* line 162, /Users/nattkua/Clients/modulus/jason/assets/styles/_fonts.scss */
 .cover h1 {
   font-family: "nimbus-sans-condensed" sans-serif;
   font-size: 0.9em;
@@ -204,7 +201,7 @@ a {
   width: 40%;
 }
 
-/* line 174, /Users/nattkua/Clients/modulus/jason/assets/styles/_fonts.scss */
+/* line 176, /Users/nattkua/Clients/modulus/jason/assets/styles/_fonts.scss */
 .phone_wrapper h1 {
   font-family: "nimbus-sans-condensed" sans-serif;
   font-size: 1em;
@@ -216,22 +213,22 @@ a {
   text-align: center;
   width: 80%;
 }
-/* line 184, /Users/nattkua/Clients/modulus/jason/assets/styles/_fonts.scss */
+/* line 186, /Users/nattkua/Clients/modulus/jason/assets/styles/_fonts.scss */
 .phone_wrapper h1 span {
   color: #a3c3ed;
 }
-/* line 188, /Users/nattkua/Clients/modulus/jason/assets/styles/_fonts.scss */
+/* line 190, /Users/nattkua/Clients/modulus/jason/assets/styles/_fonts.scss */
 .phone_wrapper a {
   color: #a3c3ed;
   font-size: 1.4em;
   text-transform: uppercase;
 }
 
-/* line 195, /Users/nattkua/Clients/modulus/jason/assets/styles/_fonts.scss */
+/* line 197, /Users/nattkua/Clients/modulus/jason/assets/styles/_fonts.scss */
 footer {
   text-align: center;
 }
-/* line 197, /Users/nattkua/Clients/modulus/jason/assets/styles/_fonts.scss */
+/* line 199, /Users/nattkua/Clients/modulus/jason/assets/styles/_fonts.scss */
 footer p {
   color: #3e3e3e;
   font-family: "Trebuchet MS", Helvetica, sans-serif;
@@ -239,7 +236,7 @@ footer p {
   font-weight: 100;
   line-height: 1.6em;
 }
-/* line 204, /Users/nattkua/Clients/modulus/jason/assets/styles/_fonts.scss */
+/* line 206, /Users/nattkua/Clients/modulus/jason/assets/styles/_fonts.scss */
 footer a {
   color: #6a7573;
   font-family: "Trebuchet MS", Helvetica, sans-serif;
@@ -247,15 +244,15 @@ footer a {
   font-style: normal;
   font-weight: 100;
 }
-/* line 210, /Users/nattkua/Clients/modulus/jason/assets/styles/_fonts.scss */
+/* line 212, /Users/nattkua/Clients/modulus/jason/assets/styles/_fonts.scss */
 footer a:visited {
   color: #6a7573;
 }
-/* line 211, /Users/nattkua/Clients/modulus/jason/assets/styles/_fonts.scss */
+/* line 213, /Users/nattkua/Clients/modulus/jason/assets/styles/_fonts.scss */
 footer a:hover {
   color: #9d8b5d;
 }
-/* line 213, /Users/nattkua/Clients/modulus/jason/assets/styles/_fonts.scss */
+/* line 215, /Users/nattkua/Clients/modulus/jason/assets/styles/_fonts.scss */
 footer a:nth-child(1):after, footer a:nth-child(2):after {
   content: " / ";
 }
