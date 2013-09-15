@@ -196,13 +196,16 @@
 		  		console.log('ending');
 		  		ending();
 		  		timer = setTimeout(checkAudioTime, 1000);
-		  	}else if(video3.currentTime.toFixed(0) == fanTimer && video3.currentTime.toFixed(0) != jaTimer){
-		  		fanTimer = fanTimer + 5;
+		  	}/*else if(video3.currentTime.toFixed(0) == 53){
+		  		
+		  		timer = setTimeout(checkAudioTime, 1000);
+		  	} */else if(video3.currentTime.toFixed(0) == fanTimer && video3.currentTime.toFixed(0) != jaTimer){
+		  		fanTimer = fanTimer + 6;
 		  		fanVid();
 		  		timer = setTimeout(checkAudioTime, 1000);
 		  		console.log('fan');
 		  	}else if(video3.currentTime.toFixed(0) == jaTimer){
-		  		jaTimer = jaTimer + 25;
+		  		jaTimer = jaTimer + 28;
 		  		fanTimer = fanTimer + 10;
 		  		jaVid();
 		  		timer = setTimeout(checkAudioTime, 1000);
@@ -210,6 +213,7 @@
 		  	}else{
 		  		timer = setTimeout(checkAudioTime, 1000);
 		  		console.log(video3.currentTime.toFixed(0));
+		  		console.log(jaTimer);
 		  	}
 		  }
 

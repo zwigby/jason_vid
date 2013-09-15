@@ -1,11 +1,13 @@
 /*Fonts*/
+$font: 'nimbus-sans-condensed' sans-serif;
+
 p{
-	font-family: 'Oswald', sans-serif;
+	font-family: $font;
 	font-size: 0.8em;
 }
 
 h2{
-	font-family: 'Oswald', sans-serif;
+	font-family: $font;
 	font-size: 0.9em;
 	font-weight: 400;
 	letter-spacing: 0.1em;
@@ -28,10 +30,10 @@ a{
 	}
 	h1{
 		color: $blue;
-		font-family: 'Oswald', sans-serif;
-		font-size: 2.5em;
+		font-family: $font;
+		font-size: 2.8em;
 		font-weight: 600;
-		letter-spacing: 0.15em;
+		letter-spacing: 0.05em;
 		position: relative; 
 		z-index: 2;
 		background: -webkit-linear-gradient(#66a6f0, #66a6f0, #a3c3ed, #66a6f0, #66a6f0);
@@ -52,11 +54,11 @@ a{
 .hash-info{
 	h1{
 		color: $black;
-		font-family: 'Oswald', sans-serif;
-		font-size: 0.8em;
-		font-weight: 400;
+		font-family: $font;
+		font-size: 0.9em;
+		font-weight: 900;
 		letter-spacing: 0em;
-		line-height: 1.6em;
+		line-height: 1.4em;
 		text-align: center;
 		width: 75%;
 		margin: 0.5em auto 0;
@@ -91,10 +93,10 @@ a{
 
 .pre-order{
 	h2{
-		font-family: 'Oswald', sans-serif;
+		font-family: $font;
 		font-size: 1.5em;
-		font-weight: 700;
-		letter-spacing: 0.1em;
+		font-weight: 400;
+		letter-spacing: 0.08em;
 		line-height: 1.2em;
 		padding: 0 0.4em;
 		text-align: center;
@@ -108,14 +110,14 @@ a{
 	a{
 		-webkit-box-shadow:  1px 1px 50px 3px rgba(0, 0, 0, .4);
         box-shadow:  1px 1px 50px 3px rgba(0, 0, 0, .4);
-		color: #000;
+		color: $darkGrey;
 		display: block;
-		font-family: oswald;
+		font-family: $font;
 		font-weight: 600;
-		font-size: 1em;
+		font-size: 1.2em;
 		margin: 1em auto;
 		max-width: 11em;
-		padding: 0.3em 1em;
+		padding: 0.1em 1em;
 		position: relative;
 		text-transform: uppercase;
 		text-align: right;
@@ -124,8 +126,7 @@ a{
 		width: 95%;
 		img{
 			position: absolute;
-			width: 35px;
-			top: 0;
+			width: 25px;
 			left: 0.5em;
 		}
 	}
@@ -134,13 +135,13 @@ a{
 .chat_wrapper{
 	h2{
 		color: $white;
-		font-size: 0.8em;
-		font-weight: 700;
+		font-size: 0.9em;
+		font-weight: 400;
 		text-shadow: 3px 3px 2px #000000;
         filter: dropshadow(color=#000000, offx=1, offy=1);
 		span{
 			color: $white;
-			font-size: 1.3em;
+			font-size: 1.2em;
 		}
 		.date{
 			color: $blue;
@@ -148,7 +149,7 @@ a{
 	}
 	a, a:visited{
 		color: $blue;
-		font-size: 1.3em;
+		font-size: 1.2em;
 		& :hover{
 			color: $white;
 		}
@@ -157,7 +158,7 @@ a{
 
 .cover{
 	h1{
-		font-family: 'Oswald', sans-serif;
+		font-family: $font;
 		font-size: 0.9em;
 		font-weight: 400;
 		letter-spacing: 0.1em;
@@ -171,11 +172,11 @@ a{
 
 .phone_wrapper{
 	h1{
-		font-family: 'Oswald', sans-serif;
-		font-size: 0.9em;
+		font-family: $font;
+		font-size: 1em;
 		font-weight: 400;
 		letter-spacing: 0.1em;
-		line-height: 1.8em;
+		line-height: 1.3em;
 		margin: 0 auto 0;
 		padding: 0 0.4em;
 		text-align: center;
