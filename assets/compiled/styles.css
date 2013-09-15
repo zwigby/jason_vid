@@ -217,12 +217,18 @@ a {
   text-align: center;
   width: 80%;
 }
+/* line 184, /Users/nattkua/Clients/modulus/jason/assets/styles/_fonts.scss */
+.phone_wrapper a {
+  color: #a3c3ed;
+  font-size: 1.4em;
+  text-transform: uppercase;
+}
 
-/* line 186, /Users/nattkua/Clients/modulus/jason/assets/styles/_fonts.scss */
+/* line 191, /Users/nattkua/Clients/modulus/jason/assets/styles/_fonts.scss */
 footer {
   text-align: center;
 }
-/* line 188, /Users/nattkua/Clients/modulus/jason/assets/styles/_fonts.scss */
+/* line 193, /Users/nattkua/Clients/modulus/jason/assets/styles/_fonts.scss */
 footer p {
   color: #3e3e3e;
   font-family: "Trebuchet MS", Helvetica, sans-serif;
@@ -230,7 +236,7 @@ footer p {
   font-weight: 100;
   line-height: 1.6em;
 }
-/* line 195, /Users/nattkua/Clients/modulus/jason/assets/styles/_fonts.scss */
+/* line 200, /Users/nattkua/Clients/modulus/jason/assets/styles/_fonts.scss */
 footer a {
   color: #6a7573;
   font-family: "Trebuchet MS", Helvetica, sans-serif;
@@ -238,15 +244,15 @@ footer a {
   font-style: normal;
   font-weight: 100;
 }
-/* line 201, /Users/nattkua/Clients/modulus/jason/assets/styles/_fonts.scss */
+/* line 206, /Users/nattkua/Clients/modulus/jason/assets/styles/_fonts.scss */
 footer a:visited {
   color: #6a7573;
 }
-/* line 202, /Users/nattkua/Clients/modulus/jason/assets/styles/_fonts.scss */
+/* line 207, /Users/nattkua/Clients/modulus/jason/assets/styles/_fonts.scss */
 footer a:hover {
   color: #9d8b5d;
 }
-/* line 204, /Users/nattkua/Clients/modulus/jason/assets/styles/_fonts.scss */
+/* line 209, /Users/nattkua/Clients/modulus/jason/assets/styles/_fonts.scss */
 footer a:nth-child(1):after, footer a:nth-child(2):after {
   content: " / ";
 }
@@ -303,7 +309,7 @@ html body .wrapper {
   .phone_wrapper {
     display: block;
     height: 10em;
-    margin: 8em  auto 0;
+    margin: 5em  auto 0;
     padding: 2em 1em;
     position: relative;
     text-align: center;
@@ -621,6 +627,12 @@ html body .wrapper {
   width: 55%;
   z-index: 20;
 }
+@media screen and (max-width: 40em) {
+  /* line 1, /Users/nattkua/Clients/modulus/jason/assets/styles/_chat.scss */
+  .chat_wrapper {
+    width: 90%;
+  }
+}
 
 /* social */
 /* line 2, /Users/nattkua/Clients/modulus/jason/assets/styles/_footer.scss */
@@ -710,11 +722,13 @@ footer .spark-logo a {
     height: 3em;
     margin: 0 auto;
     text-indent: -9999px;
-    position: static;
+    top: 44.2em;
+    position: absolute;
     width: 3em;
+    right: 40%;
   }
 }
-/* line 55, /Users/nattkua/Clients/modulus/jason/assets/styles/_logo.scss */
+/* line 57, /Users/nattkua/Clients/modulus/jason/assets/styles/_logo.scss */
 .logo-wrap .instagram {
   background-image: url("/images/ig-logo.png");
   background-size: cover;
@@ -728,14 +742,16 @@ footer .spark-logo a {
   z-index: 20;
 }
 @media screen and (max-width: 40em) {
-  /* line 55, /Users/nattkua/Clients/modulus/jason/assets/styles/_logo.scss */
+  /* line 57, /Users/nattkua/Clients/modulus/jason/assets/styles/_logo.scss */
   .logo-wrap .instagram {
     display: inline-block;
     height: 3em;
     margin: 0 auto;
     text-indent: -9999px;
-    position: static;
+    top: 44.2em;
+    position: absolute;
     width: 3em;
+    right: 50%;
   }
 }
 
