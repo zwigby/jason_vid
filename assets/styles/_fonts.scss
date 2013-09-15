@@ -181,6 +181,9 @@ a{
 		padding: 0 0.4em;
 		text-align: center;
 		width: 80%;
+		span{
+			color: $blue;
+		}
 	}
 	a{
 		color: $blue;

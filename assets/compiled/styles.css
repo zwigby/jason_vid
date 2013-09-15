@@ -216,18 +216,22 @@ a {
   text-align: center;
   width: 80%;
 }
-/* line 185, /Users/nattkua/Clients/modulus/jason/assets/styles/_fonts.scss */
+/* line 184, /Users/nattkua/Clients/modulus/jason/assets/styles/_fonts.scss */
+.phone_wrapper h1 span {
+  color: #a3c3ed;
+}
+/* line 188, /Users/nattkua/Clients/modulus/jason/assets/styles/_fonts.scss */
 .phone_wrapper a {
   color: #a3c3ed;
   font-size: 1.4em;
   text-transform: uppercase;
 }
 
-/* line 192, /Users/nattkua/Clients/modulus/jason/assets/styles/_fonts.scss */
+/* line 195, /Users/nattkua/Clients/modulus/jason/assets/styles/_fonts.scss */
 footer {
   text-align: center;
 }
-/* line 194, /Users/nattkua/Clients/modulus/jason/assets/styles/_fonts.scss */
+/* line 197, /Users/nattkua/Clients/modulus/jason/assets/styles/_fonts.scss */
 footer p {
   color: #3e3e3e;
   font-family: "Trebuchet MS", Helvetica, sans-serif;
@@ -235,7 +239,7 @@ footer p {
   font-weight: 100;
   line-height: 1.6em;
 }
-/* line 201, /Users/nattkua/Clients/modulus/jason/assets/styles/_fonts.scss */
+/* line 204, /Users/nattkua/Clients/modulus/jason/assets/styles/_fonts.scss */
 footer a {
   color: #6a7573;
   font-family: "Trebuchet MS", Helvetica, sans-serif;
@@ -243,15 +247,15 @@ footer a {
   font-style: normal;
   font-weight: 100;
 }
-/* line 207, /Users/nattkua/Clients/modulus/jason/assets/styles/_fonts.scss */
+/* line 210, /Users/nattkua/Clients/modulus/jason/assets/styles/_fonts.scss */
 footer a:visited {
   color: #6a7573;
 }
-/* line 208, /Users/nattkua/Clients/modulus/jason/assets/styles/_fonts.scss */
+/* line 211, /Users/nattkua/Clients/modulus/jason/assets/styles/_fonts.scss */
 footer a:hover {
   color: #9d8b5d;
 }
-/* line 210, /Users/nattkua/Clients/modulus/jason/assets/styles/_fonts.scss */
+/* line 213, /Users/nattkua/Clients/modulus/jason/assets/styles/_fonts.scss */
 footer a:nth-child(1):after, footer a:nth-child(2):after {
   content: " / ";
 }
