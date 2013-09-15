@@ -6,7 +6,7 @@
 	max-width: 36em;
 	position: relative;
 	width: 100%;
-    @media screen and (max-width: 36em){
+    @media screen and (max-width: 40em){
         display: none;
         position: absolute;
         top: -100%;
@@ -80,7 +80,6 @@
         }
     }
     video{
-    	display: block;
 		height: 100%;
 		margin: 0 auto;
 		position: absolute;

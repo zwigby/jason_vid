@@ -1,20 +1,25 @@
 .hash-info{
-	@include rgba-background($slate, 0.2);
-	left: 1.5em;
-	padding: 3em 1em;
+	background-image: url('/images/hashBg.png');
+	background-size: cover;
+	left: 6.5em;
+	padding: 1.5em 0.5em;
 	position: absolute;
-	top: 10em;
-	width: 20%;
+	top: 14em;
+	width: 12em;
+	height: 12em;
+	z-index: 20;
 	@media screen and (max-width: 63em){
+		background-image: none;
+		@include rgba-background($slate, 0.2);
 		margin: 0em auto -7em;
 		max-width: 36em;
 		position: static;
 		width: 90%;
 	}
-	@media screen and (max-width: 36em){
-		margin: 5em auto 0em;
-		max-width: 36em;
-		position: static;
-		width: 100%;
+	@media screen and (max-width: 40em){
+		display: none;
+	}
+	.tag{
+		margin: 0 0 -1em;
 	}
 }

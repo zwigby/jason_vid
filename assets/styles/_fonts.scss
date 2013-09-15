@@ -16,16 +16,75 @@ a{
 	text-decoration: none;
 }
 
+.top-banner{
+	background-color: $darkBlue;
+	padding: 0em;
+	position: absolute;
+	text-align: center;
+	top: 0;
+	width:100%;
+	@media screen and (max-width: 40em){
+		display: none;
+	}
+	h1{
+		color: $blue;
+		font-family: 'Oswald', sans-serif;
+		font-size: 2.5em;
+		font-weight: 600;
+		letter-spacing: 0.15em;
+		position: relative; 
+		z-index: 2;
+		background: -webkit-linear-gradient(#66a6f0, #66a6f0, #a3c3ed, #66a6f0, #66a6f0);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+	}
+	.under{
+		background: none;
+		position: absolute;
+		text-shadow: 1px 2px 5px #000000;
+		z-index: 1;
+		top: 0em;
+		text-align: center;
+		width: 100%;
+	}
+}
+
 .hash-info{
 	h1{
+		color: $black;
 		font-family: 'Oswald', sans-serif;
-		font-size: 1em;
+		font-size: 0.8em;
 		font-weight: 400;
-		letter-spacing: 0.1em;
-		line-height: 1.8em;
+		letter-spacing: 0em;
+		line-height: 1.6em;
 		text-align: center;
+		width: 75%;
+		margin: 0.5em auto 0;
+		@media screen and (max-width: 63em){
+				color: $white;
+				font-size: 1em;
+			}
+			@media screen and (max-width: 36em){
+				color: $white;
+				font-size: 1.4em;
+			}
 		span{
-			color: $gold;
+			color: #66a6f0;
+			font-size: 1.3em;
+			font-weight: 600;
+			line-height: 1.7em;
+			letter-spacing: 0.1em;
+			background: -webkit-linear-gradient(#66a6f0, #66a6f0, #a3c3ed, #66a6f0, #66a6f0);
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+        	-webkit-text-stroke: 1px black;
+        	@media screen and (max-width: 63em){
+				font-size: 1em;
+				font-weight: 600;
+			}
+			@media screen and (max-width: 36em){
+				font-size: 1em;
+			}
 		}
 	}
 }
@@ -33,12 +92,18 @@ a{
 .pre-order{
 	h2{
 		font-family: 'Oswald', sans-serif;
-		font-size: 0.9em;
-		font-weight: 400;
+		font-size: 1.5em;
+		font-weight: 700;
 		letter-spacing: 0.1em;
-		line-height: 1.8em;
+		line-height: 1.2em;
 		padding: 0 0.4em;
 		text-align: center;
+		margin: 9.5em 0 0;
+		text-shadow: 2px 2px 3px #000000;
+        filter: dropshadow(color=#000000, offx=1, offy=1);
+		@media screen and (max-width: 40em){
+			margin: 0;
+		}
 	}
 	a{
 		-webkit-box-shadow:  1px 1px 50px 3px rgba(0, 0, 0, .4);
@@ -46,33 +111,46 @@ a{
 		color: #000;
 		display: block;
 		font-family: oswald;
-		font-weight: 500;
-		font-size: 0.8em;
+		font-weight: 600;
+		font-size: 1em;
 		margin: 1em auto;
 		max-width: 11em;
-		padding: 0.1em 1em;
+		padding: 0.3em 1em;
+		position: relative;
 		text-transform: uppercase;
-		text-align: left;
+		text-align: right;
 		@include filter-gradient(#a3c2ec, #cfdff5, vertical); 
 		@include background-image(linear-gradient(top,  #cfdff5 0%,#92bdf4 46%,#a3c2ec 99%));
-		width: 80%;
+		width: 95%;
 		img{
-			margin-right: 1em;
+			position: absolute;
+			width: 35px;
+			top: 0;
+			left: 0.5em;
 		}
 	}
 }
 
 .chat_wrapper{
 	h2{
-		color: $gold;
+		color: $white;
+		font-size: 0.8em;
+		font-weight: 700;
+		text-shadow: 3px 3px 2px #000000;
+        filter: dropshadow(color=#000000, offx=1, offy=1);
 		span{
 			color: $white;
+			font-size: 1.3em;
+		}
+		.date{
+			color: $blue;
 		}
 	}
-	a{
-		color: $white;
-		& hover{
-			color: $blue;
+	a, a:visited{
+		color: $blue;
+		font-size: 1.3em;
+		& :hover{
+			color: $white;
 		}
 	}
 }
@@ -88,6 +166,20 @@ a{
 		padding: 0 0.4em;
 		text-align: center;
 		width: 40%;
+	}
+}
+
+.phone_wrapper{
+	h1{
+		font-family: 'Oswald', sans-serif;
+		font-size: 0.9em;
+		font-weight: 400;
+		letter-spacing: 0.1em;
+		line-height: 1.8em;
+		margin: 0 auto 0;
+		padding: 0 0.4em;
+		text-align: center;
+		width: 80%;
 	}
 }
 

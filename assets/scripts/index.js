@@ -6,7 +6,7 @@
    	    var out = []; 
 		var insta_vid_list = [];
 		var insta_vid_list2 = [];
-		var jason_vid_list = ['../images/ja_clips/ja_clip_1.mp4','../images/ja_clips/ja_clip_2.mp4','../images/ja_clips/ja_clip_3.mp4','../images/ja_clips/ja_clip_4.mp4','../images/ja_clips/ja_clip_5.mp4','../images/ja_clips/ja_clip_6.mp4','../images/ja_clips/ja_clip_7.mp4'];
+		var listCheck = false;
 		var fanTimer = 12;
 		var jaTimer = 27;
 
@@ -14,8 +14,6 @@
 		var video = document.getElementById('v1');
 		var video2 = document.getElementById('v2');
 		var video3 = document.getElementById('v3');
-		//var phone_v = document.getElementById('phone_v');
-		var audio = document.getElementById('a');
 
 		//usernames
 		var names = document.getElementById('usernames');
@@ -80,24 +78,78 @@
 
 		  }
 		  return array;
-		}										
+		}								
 
-		shuffle(insta_vid_list);
-		for(i = 0; i <= insta_vid_list.length; i++){
-		  	if(insta_vid_list[i] === undefined){
-		  		insta_vid_list.splice(i,1);
-		  	}
-		  }
+		if(solidus.context.resources.vids.data[0].type === 'image'){
+			
+			video3.setAttribute("src", "../images/ja_clips/jason_full_vid.mp4");
+  			video3.load();
 
+  			start.addEventListener("click", function() {
+  				cover.addClass('closed');
+		    	vInfo.fadeTo(2000, 1, function(){
+		    		vInfo.delay(5000).fadeTo(2000, 0, function(){
+		    			vInfo.delay(10000).remove();
+		    		});
+		    	});
+	    	
+	      		if (clickCount % 2 == 0) {
+	      			video3.play();
+		      		timer = setTimeout(checkAudioTime, 1000);
+		      		clickCount++;
+	      		}else{
+	      			clearTimeout(timer);
+	      			video3.pause();
+		      		clickCount++;
+	      		};
+	      	});
+
+      		var checkAudioTime = function(){
+			  	if(video3.currentTime.toFixed(0) == 230){
+			  		closing();
+			  	}
+			  	timer = setTimeout(checkAudioTime, 1000);
+			  	console.log(video3.currentTime.toFixed(0));
+			}
+
+			var closing = function(){
+			  	end.removeClass('closed');
+			  	cover.css({display: 'none'});
+			  	clearTimeout(timer);
+			  	setTimeout(function(){
+			  		video3.setAttribute("src", "../images/ja_clips/jason_full_vid.mp4");
+			  		video3.load();
+			  	}, 5000)
+	  		}
+
+			end.click(function(){
+				end.addClass('closed');
+				video3.play();
+				names.innerHTML = '';
+				timer = setTimeout(checkAudioTime, 1000);
+				clickCount++;
+				cover.css({display: 'block'});
+			});
+		
+		}else{
+		
+			shuffle(insta_vid_list);
+			for(i = 0; i <= insta_vid_list.length; i++){
+				if(insta_vid_list[i] === undefined){
+			  		insta_vid_list.splice(i,1);
+				}
+			}
+
+			listCheck = true;
 			video.setAttribute("src", insta_vid_list[videoIndex].url);
-	  		video.load();
-	  		video.muted = true;
-	  		video2.setAttribute("src", insta_vid_list[videoIndex+1].url);
-	  		video.load();
-	  		video.muted = true;
-	  		video3.setAttribute("src", "../images/ja_clips/jason_full_vid.mp4");
-	  		video3.load();
-
+				video.load();
+				video.muted = true;
+				video2.setAttribute("src", insta_vid_list[videoIndex+1].url);
+				video.load();
+				video.muted = true;
+				video3.setAttribute("src", "../images/ja_clips/jason_full_vid.mp4");
+				video3.load();
+			
 		    start.addEventListener("click", function() {
 		    	vInfo.fadeTo(2000, 1, function(){
 		    		vInfo.delay(5000).fadeTo(2000, 0, function(){
@@ -105,34 +157,34 @@
 		    		});
 		    	});
 		    	
-	      		if (clickCount % 2 == 0) {
-	      			cover.addClass('closed');
-	      			if (player3.hasClass('closed')&&player2.hasClass('closed')) {
-	      				video.play();
-	      				names.innerHTML = '<ul><li></li><li>'+insta_vid_list[videoIndex].username+'</li></ul>';
-	      			}else if(player3.hasClass('closed')&&player1.hasClass('closed')){
-	      				video2.play();
-	      				names.innerHTML = '<ul><li></li><li>'+insta_vid_list[videoIndex].username+'</li></ul>';
-	      			}else{
-	      				video3.play();
-	      				names.innerHTML = '';
+		  		if (clickCount % 2 == 0) {
+		  			cover.addClass('closed');
+		  			if (player3.hasClass('closed')&&player2.hasClass('closed')) {
+		  				video.play();
+		  				names.innerHTML = '<ul><li></li><li>'+insta_vid_list[videoIndex].username+'</li></ul>';
+		  			}else if(player3.hasClass('closed')&&player1.hasClass('closed')){
+		  				video2.play();
+		  				names.innerHTML = '<ul><li></li><li>'+insta_vid_list[videoIndex].username+'</li></ul>';
+		  			}else{
+		  				video3.play();
+		  				names.innerHTML = '';
 
-	      			};
-	      			video3.play();
+		  			};
+		  			video3.play();
 		      		timer = setTimeout(checkAudioTime, 1000);
 		      		clickCount++;
-	      		}else{
+		  		}else{
 		      		if (player3.hasClass('closed')&&player2.hasClass('closed')) {
-	      				video.pause();
-	      			}else if(player3.hasClass('closed')&&player1.hasClass('closed')){
-	      				video2.pause();
-	      			}else{
-	      				video3.pause();
-	      			};
-	      			clearTimeout(timer);
-	      			video3.pause();
+		  				video.pause();
+		  			}else if(player3.hasClass('closed')&&player1.hasClass('closed')){
+		  				video2.pause();
+		  			}else{
+		  				video3.pause();
+		  			};
+		  			clearTimeout(timer);
+		  			video3.pause();
 		      		clickCount++;
-	      		};
+		  		};
 
 		    });
 
@@ -157,7 +209,7 @@
 		  		console.log('jason');
 		  	}else{
 		  		timer = setTimeout(checkAudioTime, 1000);
-		  		console.log(jaTimer);
+		  		console.log(video3.currentTime.toFixed(0));
 		  	}
 		  }
 
@@ -167,9 +219,9 @@
 			player2.addClass('closed');
 			player1.addClass('closed');
 			setTimeout(function(){
-				  video.setAttribute("src", insta_vid_list[videoIndex+1].url);
-			  	  video.load();	
-			  }, 1000);
+				video.setAttribute("src", insta_vid_list[videoIndex+1].url);
+			  	video.load();	
+		  	}, 1000);
 			names.innerHTML = '';
 			jaCount++;
 		  }
@@ -233,118 +285,18 @@
 
 		  end.click(function(){
 		  	vInfo.fadeTo(2000, 1, function(){
-	    		vInfo.delay(1000).fadeTo(2000, 0, function(){
-	    			vInfo.delay(10000).css({display: 'none'});
-	    		});
-	    	});
-  			end.addClass('closed');
-  			video3.play();
-  			names.innerHTML = '';
-      		timer = setTimeout(checkAudioTime, 1000);
-      		clickCount++;
-      		cover.css({display: 'block'});
+				vInfo.delay(1000).fadeTo(2000, 0, function(){
+					vInfo.delay(10000).css({display: 'none'});
+				});
+			});
+				end.addClass('closed');
+				video3.play();
+				names.innerHTML = '';
+				timer = setTimeout(checkAudioTime, 1000);
+				clickCount++;
+				cover.css({display: 'block'});
 		  });
 
-		  //Phone JS 
-			var phone_cover = document.getElementById("click");
-			var phone_click = $("#click");
-			console.log(phone_cover);
-
-			(function() {
-			    var context, 
-			        soundSource, 
-			        soundBuffer,
-			        url = '../music/ja-nt.mp3';
-
-			    // Step 1 - Initialise the Audio Context
-			    // There can be only one!
-			    function init() {
-			        if (typeof AudioContext !== "undefined") {
-			            context = new AudioContext();
-			        } else if (typeof webkitAudioContext !== "undefined") {
-			            context = new webkitAudioContext();
-			        } else {
-			            throw new Error('AudioContext not supported. :(');
-			        }
-			    }
-
-			    // Step 2: Load our Sound using XHR
-			    function startSound() {
-			    	alert('playing!')
-			        // Note: this loads asynchronously
-			        var request = new XMLHttpRequest();
-			        request.open("GET", url, true);
-			        request.responseType = "arraybuffer";
-
-			        // Our asynchronous callback
-			        request.onload = function() {
-			            var audioData = request.response;
-
-			            audioGraph(audioData);
-
-			        };
-
-			        request.send();
-			    }
-
-			    // Finally: tell the source when to start
-			    function playSound() {
-			        // play the source now
-			        soundSource.noteOn(context.currentTime);
-			    }
-
-			    function stopSound() {
-			        // stop the source now
-			        soundSource.noteOff(context.currentTime);
-			    }
-
-				phone_click.bind( "touchstart", startSound);
-
-			    // This is the code we are interested in
-			    function audioGraph(audioData) {
-			        // create a sound source
-			        soundSource = context.createBufferSource();
-
-			        // The Audio Context handles creating source buffers from raw binary
-			        soundBuffer = context.createBuffer(audioData, true/* make mono */);
-			      
-			        // Add the buffered data to our object
-			        soundSource.buffer = soundBuffer;
-
-			        // Plug the cable from one thing to the other
-			        soundSource.connect(context.destination);
-
-			        // Finally
-			        playSound(soundSource);
-			    }
-
-			    init();
-
-			}());
-
-			phone_v.setAttribute("src", insta_vid_list[videoIndex].url);
-	  		phone_v.load();
-	  		phone_v.muted = true;
-
-
-			function myNewSrc() {
-				if(videoIndex >= insta_vid_list.length) videoIndex = 0;
-				var phone_v = document.getElementsByTagName('video')[0];
-	            phone_v.src = insta_vid_list[videoIndex].url;
-	            phone_v.load();
-	            phone_v.muted = true;
-	            phone_v.play();				
-	        }
-	        
-	        function myAddListener(){
-	        	var phone_v = document.getElementsByTagName('video')[0];
-	        	phone_v.addEventListener("timeupdate", function() {
-		       		if (this.currentTime >= 5 || this.currentTime === this.duration) {
-		            	videoIndex++;
-		            	myNewSrc();
-		            	console.log(videoIndex);
-		        	}
-		    	}, false);
-	        }
+		}
 
 	});

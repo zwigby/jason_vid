@@ -3,25 +3,37 @@
 	right: 1.5em;
 	padding: 0em 1em;
 	position: absolute;
-	top: 10em;
+	top: 7em;
 	width: 20%;
 	@media screen and (max-width: 63em){
-		margin: -7em auto 8em;
+		margin: -21em auto 8em;
 		max-width: 36em;
 		position: static;
 		width: 90%;
 	}
-	@media screen and (max-width: 36em){
-		margin: 10em auto 8em;
-		max-width: 36em;
+	@media screen and (max-width: 40em){
+		margin: 1em auto 8em;
+		max-width: 40em;
+		padding: 3em 0 1em;
 		position: static;
 		width: 100%;
+		text-align: center;
 	}
-	.nt-logo{
-		background-image: url("/images/ja-nt-logo.png");
-		background-size: cover;
-		height: 10.5em;
-		margin: 0 auto;
-		width: 12em;
+	.dvd-cover{
+		width: 260px;
+		position: absolute;
+		margin: 0 0 0 -3em;
+		@media screen and (max-width: 63em){
+			margin: 0 0 0 -130px;
+			left: 50%;
+			position: relative;
+			top: 15em;
+		}
+		@media screen and (max-width: 40em){
+			margin: 0;
+			left: 50%;
+			position: static;
+			top: 15em;
+		}
 	}
 }

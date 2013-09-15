@@ -1,8 +1,11 @@
 .chat_wrapper{
+	background-image: image-url('bottom.png');
+	background-size: cover;
 	margin: -5em auto 0;
 	max-width: 44em;
+	padding: 0.3em 0.1em;
 	position: relative;
 	text-align: center;
-	width: 75%;
+	width: 55%;
 	z-index: 20;
 }

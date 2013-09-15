@@ -18,11 +18,15 @@ html{
 			margin: 0 auto;
 			max-width: 65em;
 			min-height: 100%;
-			padding: 3em;
+			padding: 0em;
 			position: relative;
 			width: 100%;
-			@media screen and (max-width: 36em){
-				padding: 0;
+			@media screen and (max-width: 63em){
+				padding:4em 3em 0;
+				position: static;
+			}
+			@media screen and (max-width: 40em){
+				padding:0;
 				position: static;
 			}
 		}
