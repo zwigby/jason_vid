@@ -1,0 +1,430 @@
+/* All your CSS starts here!
+   Use SASS/CSS imports to pull in more files.
+   The Grunt scripts will automatically merge all these files into /compiled/styles.css */
+/* colos */
+/*Fonts*/
+/* line 2, /Users/keyce/Documents/Projects/sparkart/jason_vid/kik_assets/styles/_fonts.scss */
+p {
+  font-family: 'Oswald', sans-serif;
+  font-size: 0.8em;
+}
+
+/* line 7, /Users/keyce/Documents/Projects/sparkart/jason_vid/kik_assets/styles/_fonts.scss */
+h2 {
+  font-family: 'Oswald', sans-serif;
+  font-size: 0.9em;
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  line-height: 1.6em;
+}
+
+/* line 15, /Users/keyce/Documents/Projects/sparkart/jason_vid/kik_assets/styles/_fonts.scss */
+a {
+  text-decoration: none;
+}
+
+/* line 20, /Users/keyce/Documents/Projects/sparkart/jason_vid/kik_assets/styles/_fonts.scss */
+.hash-info h1 {
+  font-family: 'Oswald', sans-serif;
+  font-size: 1em;
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  line-height: 1.8em;
+  text-align: center;
+}
+/* line 27, /Users/keyce/Documents/Projects/sparkart/jason_vid/kik_assets/styles/_fonts.scss */
+.hash-info h1 span {
+  color: #477dc7;
+  text-transform: uppercase;
+}
+
+/* line 35, /Users/keyce/Documents/Projects/sparkart/jason_vid/kik_assets/styles/_fonts.scss */
+.end_img h2 {
+  font-family: 'Oswald', sans-serif;
+  font-size: 0.7em;
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  line-height: 1.8em;
+  padding: 0 0.4em;
+  text-align: center;
+}
+/* line 44, /Users/keyce/Documents/Projects/sparkart/jason_vid/kik_assets/styles/_fonts.scss */
+.end_img .pre-order {
+  -webkit-box-shadow: 1px 1px 50px 3px rgba(0, 0, 0, 0.4);
+  box-shadow: 1px 1px 50px 3px rgba(0, 0, 0, 0.4);
+  color: #000;
+  display: block;
+  font-family: oswald;
+  font-weight: 500;
+  font-size: 0.8em;
+  margin: 1em auto;
+  max-width: 11em;
+  padding: 0.1em 1em;
+  text-transform: uppercase;
+  text-align: left;
+  *zoom: 1;
+  filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FFA3C2EC', endColorstr='#FFCFDFF5');
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #cfdff5), color-stop(46%, #92bdf4), color-stop(99%, #a3c2ec));
+  background-image: -webkit-linear-gradient(top, #cfdff5 0%, #92bdf4 46%, #a3c2ec 99%);
+  background-image: -moz-linear-gradient(top, #cfdff5 0%, #92bdf4 46%, #a3c2ec 99%);
+  background-image: -o-linear-gradient(top, #cfdff5 0%, #92bdf4 46%, #a3c2ec 99%);
+  background-image: linear-gradient(top, #cfdff5 0%, #92bdf4 46%, #a3c2ec 99%);
+  width: 80%;
+}
+/* line 60, /Users/keyce/Documents/Projects/sparkart/jason_vid/kik_assets/styles/_fonts.scss */
+.end_img .pre-order img {
+  margin-right: 1em;
+}
+/* line 64, /Users/keyce/Documents/Projects/sparkart/jason_vid/kik_assets/styles/_fonts.scss */
+.end_img .fLink {
+  color: #9d8b5d;
+}
+/* line 66, /Users/keyce/Documents/Projects/sparkart/jason_vid/kik_assets/styles/_fonts.scss */
+.end_img .fLink hover {
+  color: #477dc7;
+}
+
+/* line 73, /Users/keyce/Documents/Projects/sparkart/jason_vid/kik_assets/styles/_fonts.scss */
+.play h2 {
+  color: #9d8b5d;
+}
+/* line 75, /Users/keyce/Documents/Projects/sparkart/jason_vid/kik_assets/styles/_fonts.scss */
+.play h2 span {
+  color: white;
+}
+/* line 79, /Users/keyce/Documents/Projects/sparkart/jason_vid/kik_assets/styles/_fonts.scss */
+.play a {
+  color: white;
+}
+/* line 81, /Users/keyce/Documents/Projects/sparkart/jason_vid/kik_assets/styles/_fonts.scss */
+.play a hover {
+  color: #477dc7;
+}
+
+/* line 88, /Users/keyce/Documents/Projects/sparkart/jason_vid/kik_assets/styles/_fonts.scss */
+.play_img h1 {
+  font-family: 'Oswald', sans-serif;
+  font-size: 0.9em;
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  line-height: 1.5em;
+  margin: 0em auto 0;
+  padding: 0 0.4em;
+  text-align: center;
+  width: 90%;
+}
+/* line 98, /Users/keyce/Documents/Projects/sparkart/jason_vid/kik_assets/styles/_fonts.scss */
+.play_img h1:first-of-type {
+  margin: 0.8em auto 0;
+  width: 39%;
+}
+/* line 103, /Users/keyce/Documents/Projects/sparkart/jason_vid/kik_assets/styles/_fonts.scss */
+.play_img span {
+  color: white;
+  font-size: 1.8em;
+  line-height: 2em;
+  text-transform: capitalize;
+  text-shadow: 1px 1px 1px #282828;
+  filter: dropshadow(color=#282828, offx=1, offy=1);
+}
+/* line 111, /Users/keyce/Documents/Projects/sparkart/jason_vid/kik_assets/styles/_fonts.scss */
+.play_img .song-title {
+  color: white;
+  font-size: 1.8em;
+  line-height: 1em;
+  text-transform: capitalize;
+}
+
+/* line 119, /Users/keyce/Documents/Projects/sparkart/jason_vid/kik_assets/styles/_fonts.scss */
+footer {
+  text-align: center;
+}
+/* line 121, /Users/keyce/Documents/Projects/sparkart/jason_vid/kik_assets/styles/_fonts.scss */
+footer p {
+  color: #3e3e3e;
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
+  font-size: 0.55em;
+  font-weight: 100;
+  line-height: 1.6em;
+}
+/* line 128, /Users/keyce/Documents/Projects/sparkart/jason_vid/kik_assets/styles/_fonts.scss */
+footer a {
+  color: #6a7573;
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
+  font-size: 0.6em;
+  font-style: normal;
+  font-weight: 100;
+}
+/* line 134, /Users/keyce/Documents/Projects/sparkart/jason_vid/kik_assets/styles/_fonts.scss */
+footer a:visited {
+  color: #6a7573;
+}
+/* line 135, /Users/keyce/Documents/Projects/sparkart/jason_vid/kik_assets/styles/_fonts.scss */
+footer a:hover {
+  color: #9d8b5d;
+}
+/* line 137, /Users/keyce/Documents/Projects/sparkart/jason_vid/kik_assets/styles/_fonts.scss */
+footer a:nth-child(1):after, footer a:nth-child(2):after {
+  content: " / ";
+}
+
+/* mixins */
+/* main */
+/* line 4, /Users/keyce/Documents/Projects/sparkart/jason_vid/kik_assets/styles/_main.scss */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+/* line 11, /Users/keyce/Documents/Projects/sparkart/jason_vid/kik_assets/styles/_main.scss */
+html body {
+  background-image: url('/images/bg.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  min-height: 100%;
+  position: absolute;
+  width: 100%;
+}
+/* line 16, /Users/keyce/Documents/Projects/sparkart/jason_vid/kik_assets/styles/_main.scss */
+html body .wrapper {
+  color: white;
+  margin: 0 auto;
+  max-width: 65em;
+  min-height: 100%;
+  position: relative;
+  width: 100%;
+}
+@media screen and (max-width: 36em) {
+  /* line 16, /Users/keyce/Documents/Projects/sparkart/jason_vid/kik_assets/styles/_main.scss */
+  html body .wrapper {
+    padding: 0;
+    position: static;
+  }
+}
+
+/* Video */
+/* line 2, /Users/keyce/Documents/Projects/sparkart/jason_vid/kik_assets/styles/_video.scss */
+.video_wrapper {
+  display: block;
+  height: 470px;
+  margin: -3.1em auto 0;
+  max-width: 36em;
+  position: relative;
+  width: 470px;
+}
+/* line 9, /Users/keyce/Documents/Projects/sparkart/jason_vid/kik_assets/styles/_video.scss */
+.video_wrapper .cover {
+  background-image: url("/images/player-bg.png");
+  background-size: cover;
+  -webkit-box-shadow: 1px 1px 50px 5px rgba(255, 255, 255, 0.3);
+  box-shadow: 1px 1px 50px 5px rgba(255, 255, 255, 0.3);
+  height: 300px;
+  position: absolute;
+  width: 470px;
+  background-position: bottom center;
+  z-index: 10;
+  top: 50%;
+  text-align: center;
+  margin-top: -11.5em;
+}
+/* line 23, /Users/keyce/Documents/Projects/sparkart/jason_vid/kik_assets/styles/_video.scss */
+.video_wrapper .banner {
+  position: absolute;
+  top: -0.5em;
+  right: -2.2em;
+  width: 200px;
+  z-index: 10;
+  -webkit-transition-property: opacity;
+  -moz-transition-property: opacity;
+  -o-transition-property: opacity;
+  transition-property: opacity;
+  -webkit-transition-duration: 2s;
+  -moz-transition-duration: 2s;
+  -o-transition-duration: 2s;
+  transition-duration: 2s;
+  -webkit-transition-timing-function: ease-in;
+  -moz-transition-timing-function: ease-in;
+  -o-transition-timing-function: ease-in;
+  transition-timing-function: ease-in;
+}
+/* line 33, /Users/keyce/Documents/Projects/sparkart/jason_vid/kik_assets/styles/_video.scss */
+.video_wrapper .play_img {
+  background-image: url('/images/new_cover.jpg');
+  background-size: cover;
+  cursor: pointer;
+  height: 99%;
+  position: absolute;
+  opacity: 1;
+  top: 0;
+  width: 100%;
+  z-index: 2;
+  -webkit-transition-property: opacity;
+  -moz-transition-property: opacity;
+  -o-transition-property: opacity;
+  transition-property: opacity;
+  -webkit-transition-duration: 2s;
+  -moz-transition-duration: 2s;
+  -o-transition-duration: 2s;
+  transition-duration: 2s;
+  -webkit-transition-timing-function: ease-in;
+  -moz-transition-timing-function: ease-in;
+  -o-transition-timing-function: ease-in;
+  transition-timing-function: ease-in;
+}
+/* line 46, /Users/keyce/Documents/Projects/sparkart/jason_vid/kik_assets/styles/_video.scss */
+.video_wrapper .play_img img {
+  margin: -0.5em auto 0;
+  width: 100px;
+}
+/* line 50, /Users/keyce/Documents/Projects/sparkart/jason_vid/kik_assets/styles/_video.scss */
+.video_wrapper .play_img .iglogo {
+  margin: -0.8em auto 0;
+  width: 150px;
+}
+/* line 54, /Users/keyce/Documents/Projects/sparkart/jason_vid/kik_assets/styles/_video.scss */
+.video_wrapper .play_img .ja-logo {
+  width: 100px;
+  position: relative;
+  top: 0.4em;
+  left: -0.5em;
+}
+/* line 61, /Users/keyce/Documents/Projects/sparkart/jason_vid/kik_assets/styles/_video.scss */
+.video_wrapper .end_img {
+  background-image: url('/images/cover.png');
+  background-size: cover;
+  cursor: pointer;
+  height: 99%;
+  opacity: 1;
+  position: absolute;
+  top: 0;
+  padding: 2em;
+  width: 100%;
+  z-index: 1;
+  -webkit-transition-property: opacity;
+  -moz-transition-property: opacity;
+  -o-transition-property: opacity;
+  transition-property: opacity;
+  -webkit-transition-duration: 2s;
+  -moz-transition-duration: 2s;
+  -o-transition-duration: 2s;
+  transition-duration: 2s;
+  -webkit-transition-timing-function: ease-in;
+  -moz-transition-timing-function: ease-in;
+  -o-transition-timing-function: ease-in;
+  transition-timing-function: ease-in;
+}
+/* line 76, /Users/keyce/Documents/Projects/sparkart/jason_vid/kik_assets/styles/_video.scss */
+.video_wrapper video {
+  height: 100%;
+  margin: 0 auto;
+  position: absolute;
+  width: 100%;
+}
+/* line 82, /Users/keyce/Documents/Projects/sparkart/jason_vid/kik_assets/styles/_video.scss */
+.video_wrapper #v1 {
+  margin: -1.5em 0 0;
+  z-index: 0;
+  -webkit-mask-box-image: url('/images/mask.png');
+}
+/* line 87, /Users/keyce/Documents/Projects/sparkart/jason_vid/kik_assets/styles/_video.scss */
+.video_wrapper #v2 {
+  margin: -1.5em 0 0;
+  z-index: 1;
+  -webkit-mask-box-image: url('/images/mask.png');
+}
+/* line 92, /Users/keyce/Documents/Projects/sparkart/jason_vid/kik_assets/styles/_video.scss */
+.video_wrapper #v3 {
+  height: 560px;
+  margin-top: -314px;
+  top: 50%;
+  width: 471px;
+  z-index: 2;
+  -webkit-mask-box-image: url("/images/jason-mask.png");
+}
+/* line 100, /Users/keyce/Documents/Projects/sparkart/jason_vid/kik_assets/styles/_video.scss */
+.video_wrapper .usernames {
+  font-family: Oswald, sans-serif;
+  font-size: 0.8em;
+  font-weight: 200;
+  letter-spacing: 0.1em;
+  position: absolute;
+  right: 3em;
+  bottom: 12em;
+  z-index: 15;
+}
+/* line 109, /Users/keyce/Documents/Projects/sparkart/jason_vid/kik_assets/styles/_video.scss */
+.video_wrapper .usernames ul {
+  display: inline-block;
+  list-style: none;
+}
+/* line 113, /Users/keyce/Documents/Projects/sparkart/jason_vid/kik_assets/styles/_video.scss */
+.video_wrapper .usernames li:nth-child(1) {
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgdmlld0JveD0iLTAuOSAtMC44IDYxIDYxIj48cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZmlsbD0iI0ZGRkZGRiIgZD0iTTcuNywwaDQ0LjVjNC4yLDAsNy43LDMuNSw3LjcsNy43djQ0LjVjMCw0LjItMy41LDcuNy03LjcsNy43SDcuN2MtNC4yLDAtNy43LTMuNS03LjctNy43VjcuN0MwLDMuNSwzLjUsMCw3LjcsMEw3LjcsMHogTTQzLjYsNi43Yy0xLjUsMC0yLjcsMS4yLTIuNywyLjd2Ni41YzAsMS41LDEuMiwyLjcsMi43LDIuN2g2LjhjMS41LDAsMi43LTEuMiwyLjctMi43VjkuNGMwLTEuNS0xLjItMi43LTIuNy0yLjdINDMuNkw0My42LDYuN3ogTTUzLjEsMjUuM2gtNS4zYzAuNSwxLjYsMC44LDMuNCwwLjgsNS4xYzAsMTAtOC4zLDE4LTE4LjYsMThzLTE4LjYtOC4xLTE4LjYtMThjMC0xLjgsMC4zLTMuNSwwLjgtNS4xSDYuN3YyNS4zQzYuNyw1Miw3LjcsNTMsOSw1M2g0MS43YzEuMywwLDIuNC0xLjEsMi40LTIuNFYyNS4zTDUzLjEsMjUuM3ogTTMwLDE4LjJjLTYuNiwwLTEyLDUuMi0xMiwxMS43YzAsNi40LDUuNCwxMS43LDEyLDExLjdzMTItNS4yLDEyLTExLjdDNDIsMjMuNCwzNi43LDE4LjIsMzAsMTguMnoiLz48L3N2Zz4=);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  height: 1.5em;
+  margin-right: 1em;
+  width: 1.5em;
+}
+/* line 122, /Users/keyce/Documents/Projects/sparkart/jason_vid/kik_assets/styles/_video.scss */
+.video_wrapper .usernames li {
+  float: left;
+}
+/* line 126, /Users/keyce/Documents/Projects/sparkart/jason_vid/kik_assets/styles/_video.scss */
+.video_wrapper .video-info {
+  position: absolute;
+  bottom: 10em;
+  opacity: 0;
+  right: 3em;
+  z-index: 25;
+  -webkit-transition-property: opacity;
+  -moz-transition-property: opacity;
+  -o-transition-property: opacity;
+  transition-property: opacity;
+  -webkit-transition-duration: 2s;
+  -moz-transition-duration: 2s;
+  -o-transition-duration: 2s;
+  transition-duration: 2s;
+  -webkit-transition-timing-function: ease-in;
+  -moz-transition-timing-function: ease-in;
+  -o-transition-timing-function: ease-in;
+  transition-timing-function: ease-in;
+}
+/* line 135, /Users/keyce/Documents/Projects/sparkart/jason_vid/kik_assets/styles/_video.scss */
+.video_wrapper .video-info p {
+  font-size: 0.8em;
+  font-weight: 200;
+  line-height: 1.5em;
+  text-align: right;
+  letter-spacing: 0.15em;
+}
+/* line 142, /Users/keyce/Documents/Projects/sparkart/jason_vid/kik_assets/styles/_video.scss */
+.video_wrapper .video-info .ja-logo {
+  width: 100px;
+  position: relative;
+  top: 0.4em;
+  left: -0.5em;
+}
+
+/* Animation */
+/* line 4, /Users/keyce/Documents/Projects/sparkart/jason_vid/kik_assets/styles/_animation.scss */
+.video_wrapper .video_player {
+  -webkit-transition-property: opacity;
+  -moz-transition-property: opacity;
+  -o-transition-property: opacity;
+  transition-property: opacity;
+  -webkit-transition-duration: 1s;
+  -moz-transition-duration: 1s;
+  -o-transition-duration: 1s;
+  transition-duration: 1s;
+}
+
+/* line 9, /Users/keyce/Documents/Projects/sparkart/jason_vid/kik_assets/styles/_animation.scss */
+.closed, .video_wrapper .cover .closed {
+  opacity: 0;
+}

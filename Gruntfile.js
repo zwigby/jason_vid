@@ -15,14 +15,19 @@ module.exports = function( grunt ){
 				},
 				files: [{
 					src: ['assets/styles/index.scss'],
-					dest: 'assets/styles/index_compiled.css' 
+					dest: 'assets/styles/index_compiled.css'
+				},
+				{
+					src: ['kik_assets/styles/index.scss'],
+					dest: 'assets/styles/index_kik_compiled.css'
 				}]
 			}
 		},
 		cssjoin: {
 			styles: {
 				files: {
-					'assets/compiled/styles.css': ['assets/styles/index_compiled.css']
+					'assets/compiled/styles.css': ['assets/styles/index_compiled.css'],
+					'assets/compiled/kik_styles.css': ['assets/styles/index_kik_compiled.css']
 				}
 			}
 		},
@@ -32,12 +37,13 @@ module.exports = function( grunt ){
 					banner: '/* Compiled on: '+ (new Date).toString() +'*/ \n'
 				},
 				files: {
-					'assets/compiled/styles.css': ['assets/styles/index_compiled.css']
+					'assets/compiled/styles.css': ['assets/styles/index_compiled.css'],
+					'kik_assets/compiled/styles.css': ['kik_assets/styles/index_compiled.css']
 				}
 			}
 		},
 		clean: {
-			styles: ['assets/styles/index_compiled.css']
+			styles: ['assets/styles/index_compiled.css', 'assets/styles/index_kik_compiled.css']
 		},
 		handlebars: {
 			compile: {
@@ -137,7 +143,7 @@ module.exports = function( grunt ){
 			}
 		}
 	});
-	
+
 	// The cool way to load Grunt tasks
 	// https://github.com/Fauntleroy/relay.js/blob/master/Gruntfile.js
 	Object.keys( pkg.devDependencies ).forEach( function( dep ){
@@ -149,7 +155,7 @@ module.exports = function( grunt ){
 		var port = grunt.option('port') || grunt.option('p');
 		solidus.start({
 			port: port
-		});		
+		});
 	});
 
 	grunt.registerMultiTask( 'replace-asset-urls', function(){
