@@ -1,0 +1,140 @@
+/*Fonts*/
+p{
+	font-family: 'Oswald', sans-serif;
+	font-size: 0.8em;
+}
+
+h2{
+	font-family: 'Oswald', sans-serif;
+	font-size: 0.9em;
+	font-weight: 400;
+	letter-spacing: 0.1em;
+	line-height: 1.6em;
+}
+
+a{
+	text-decoration: none;
+}
+
+.hash-info{
+	h1{
+		font-family: 'Oswald', sans-serif;
+		font-size: 1em;
+		font-weight: 400;
+		letter-spacing: 0.1em;
+		line-height: 1.8em;
+		text-align: center;
+		span{
+			color: $blue;
+			text-transform: uppercase;
+		}
+	}
+}
+
+.end_img{
+	h2{
+		font-family: 'Oswald', sans-serif;
+		font-size: 0.7em;
+		font-weight: 400;
+		letter-spacing: 0.1em;
+		line-height: 1.8em;
+		padding: 0 0.4em;
+		text-align: center;
+	}
+	.pre-order{
+		-webkit-box-shadow:  1px 1px 50px 3px rgba(0, 0, 0, .4);
+        box-shadow:  1px 1px 50px 3px rgba(0, 0, 0, .4);
+		color: #000;
+		display: block;
+		font-family: oswald;
+		font-weight: 500;
+		font-size: 0.8em;
+		margin: 1em auto;
+		max-width: 11em;
+		padding: 0.1em 1em;
+		text-transform: uppercase;
+		text-align: left;
+		@include filter-gradient(#a3c2ec, #cfdff5, vertical); 
+		@include background-image(linear-gradient(top,  #cfdff5 0%,#92bdf4 46%,#a3c2ec 99%));
+		width: 80%;
+		img{
+			margin-right: 1em;
+		}
+	}
+	.fLink{
+		color: $gold;
+		& hover{
+			color: $blue;
+		}
+	}
+}
+
+.play{
+	h2{
+		color: $gold;
+		span{
+			color: $white;
+		}
+	}
+	a{
+		color: $white;
+		& hover{
+			color: $blue;
+		}
+	}
+}
+
+.play_img{
+	h1{
+		font-family: 'Oswald', sans-serif;
+		font-size: 0.9em;
+		font-weight: 400;
+		letter-spacing: 0.1em;
+		line-height: 1.5em;
+		margin: 0em auto 0;
+		padding: 0 0.4em;
+		text-align: center;
+		width: 90%;
+		&:first-of-type{
+			margin: 0.8em auto 0;
+			width: 39%;
+		}
+	}
+	span{
+			color: $white;
+			font-size: 1.8em;
+			line-height: 2em;
+			text-transform: capitalize;
+			text-shadow: 1px 1px 1px #282828;
+        	filter: dropshadow(color=#282828, offx=1, offy=1);
+		}
+	.song-title{
+		color: $white;
+		font-size: 1.8em;
+		line-height: 1em;
+		text-transform: capitalize;
+	}
+}
+
+footer{
+	text-align: center;	
+	p{
+		color: $grey;	
+		font-family: "Trebuchet MS", Helvetica, sans-serif;
+		font-size: 0.55em;	
+		font-weight: 100;	
+		line-height: 1.6em;		
+	}
+	a{
+		color: $green;
+		font-family: "Trebuchet MS", Helvetica, sans-serif;
+		font-size: 0.6em;
+		font-style: normal;
+		font-weight: 100;
+ 		&:visited { color: $green; }
+		&:hover { color: $gold; }
+	}
+	a:nth-child(1):after, a:nth-child(2):after{
+		content: " / ";
+	}
+}
