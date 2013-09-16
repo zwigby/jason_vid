@@ -38,30 +38,32 @@
 
 		//preprocessor
 		//first page of vids
-		for(var i=0;i<solidus.context.resources.vids.data.length-1; i++)
-	    {
+		if(solidus.context.resources.vids.length >= 1){
+			for(var i=0;i<solidus.context.resources.vids.data.length-1; i++)
+		    {
 
-	       if(typeof solidus.context.resources.vids.data[i].videos !== 'undefined'){
-	       
-	         insta_vid_list.push({
-	           url: solidus.context.resources.vids.data[i].videos.low_resolution.url,
-	           username: solidus.context.resources.vids.data[i].user.username
-	         });    
-	       }
-	    }
+		       if(typeof solidus.context.resources.vids.data[i].videos !== 'undefined'){
+		       
+		         insta_vid_list.push({
+		           url: solidus.context.resources.vids.data[i].videos.low_resolution.url,
+		           username: solidus.context.resources.vids.data[i].user.username
+		         });    
+		       }
+		    }
 
-	    //second page of vids
-	    for(var i=0;i<solidus.context.resources.moreVids.data.length; i++)
-	    {
+		    //second page of vids
+		    for(var i=0;i<solidus.context.resources.moreVids.data.length; i++)
+		    {
 
-	       if(typeof solidus.context.resources.moreVids.data[i].videos !== 'undefined'){
-	       
-	         insta_vid_list2.push({
-	           url: solidus.context.resources.moreVids.data[i].videos.low_resolution.url,
-	           username: solidus.context.resources.moreVids.data[i].user.username
-	         });    
-	       } 
-	    }
+		       if(typeof solidus.context.resources.moreVids.data[i].videos !== 'undefined'){
+		       
+		         insta_vid_list2.push({
+		           url: solidus.context.resources.moreVids.data[i].videos.low_resolution.url,
+		           username: solidus.context.resources.moreVids.data[i].user.username
+		         });    
+		       } 
+		    }
+		}
 
 		function shuffle(array){
 		  var currentIndex = array.length;
@@ -80,7 +82,7 @@
 		  return array;
 		}								
 
-		if(solidus.context.resources.vids.data[0].type === 'image'){
+		if(solidus.context.resources.vids.data[0].type === 'image' || solidus.context.resources.vids.data[0].attribution === null ){
 			
 			video3.setAttribute("src", "../images/ja_clips/jason_full_vid.mp4");
   			video3.load();

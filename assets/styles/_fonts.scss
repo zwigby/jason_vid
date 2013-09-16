@@ -123,6 +123,9 @@ a{
 		position: relative;
 		text-transform: uppercase;
 		text-align: right;
+		@media screen and (max-width: 40em){
+				max-width: 8em;
+		}
 		/* @include filter-gradient(#a3c2ec, #cfdff5, vertical); 
 		@include background-image(linear-gradient(top,  #cfdff5 0%,#92bdf4 46%,#a3c2ec 99%)); */
 		width: 95%;
